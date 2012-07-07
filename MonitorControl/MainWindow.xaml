@@ -1,27 +1,23 @@
-﻿<metro:Window x:Class="MonitorControl.MainWindow"
-              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-              xmlns:metro="http://schemas.codeplex.com/elysium/theme"
-              xmlns:params="http://schemas.codeplex.com/elysium/theme/params"
-              xmlns:MonitorControl="clr-namespace:MonitorControl" Title="MainWindow" Height="350" Width="525"
-              WindowStartupLocation="CenterScreen"
+﻿<metro:Window x:Class="MonitorControl.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:metro="http://schemas.codeplex.com/elysium/theme"
+              xmlns:params="http://schemas.codeplex.com/elysium/theme/params" xmlns:MonitorControl="clr-namespace:MonitorControl"
+              Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen"
               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-              mc:Ignorable="d" 
-              d:DataContext="{d:DesignInstance Type=MonitorControl:ViewModel}"
-              >
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
+              d:DataContext="{d:DesignInstance Type=MonitorControl:ViewModel}">
     <Grid>
 
-      <ListBox
-        ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
-        <ListBox.ItemTemplate>
-          <DataTemplate DataType="MonitorControl:MonitorVM">
-            <DockPanel LastChildFill="true">
-              <TextBlock Margin="5" Text="{Binding Name}" Width="200"></TextBlock>
-              <Slider Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}" Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"></Slider>
-            </DockPanel>
-          </DataTemplate>
-        </ListBox.ItemTemplate>
-      </ListBox>
+        <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="MonitorControl:MonitorVM">
+                    <DockPanel LastChildFill="true">
+                        <TextBlock Margin="5" Text="{Binding Name}" Width="200"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
+                        <Slider Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
+                                Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"></Slider>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </metro:Window>

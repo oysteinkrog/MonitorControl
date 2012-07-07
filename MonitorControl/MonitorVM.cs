@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Windows.Markup;
 using Elysium.Theme.ViewModels;
 using MonitorControl.Model;
 using phyApi = MonitorControl.Interop.Win32.Dxva2.PhysicalMonitorEnumerationApi;
@@ -33,6 +34,13 @@ namespace MonitorControl
         {
             get { return _hlaMonitor.PhysicalMonitors.First().BrightnessValue; }
             set { _hlaMonitor.PhysicalMonitors.First().BrightnessValue = value; }
+        }
+
+        [DependsOn("Brightness")]
+        public double BrightnessPercent
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().BrightnessValuePercent; }
+            set { _hlaMonitor.PhysicalMonitors.First().BrightnessValuePercent = value; }
         }
 
         public string Name
