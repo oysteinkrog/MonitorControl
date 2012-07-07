@@ -1,14 +1,14 @@
-﻿using System;
-using System.Runtime.InteropServices;
-
-// ReSharper disable InconsistentNaming
+﻿// ReSharper disable InconsistentNaming
 // ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable FieldCanBeMadeReadOnly.Global
 // ReSharper disable ClassNeverInstantiated.Global
 
-namespace MonitorControl
+namespace MonitorControl.Interop
 {
+    using System;
+    using System.Runtime.InteropServices;
+
     public partial class Win32
     {
         public struct IDirect3DDevice9

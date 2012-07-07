@@ -1,13 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Windows.Interop;
-
-using HMONITOR = System.Runtime.InteropServices.HandleRef;
-
-namespace MonitorControl
+﻿namespace MonitorControl.Interop
 {
+    using System;
+    using System.ComponentModel;
+    using System.Runtime.InteropServices;
+    using System.Security;
+    using System.Windows.Interop;
+
     public partial class Win32
     {
         #region Nested type: User32
@@ -86,10 +84,10 @@ namespace MonitorControl
 
 
             [DllImport("User32.dll", ExactSpelling = true)]
-            public static extern HMONITOR MonitorFromPoint(POINTSTRUCT pt, int flags);
+            public static extern HandleRef MonitorFromPoint(POINTSTRUCT pt, int flags);
 
             [DllImport("User32")]
-            public static extern HMONITOR MonitorFromWindow(IntPtr handle, MonitorFromWindowFlags flags);
+            public static extern HandleRef MonitorFromWindow(IntPtr handle, MonitorFromWindowFlags flags);
 
             // size of a device name string
 

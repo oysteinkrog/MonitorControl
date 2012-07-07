@@ -1,9 +1,9 @@
-﻿using System;
-using System.Drawing;
-using System.Runtime.InteropServices;
-
-namespace MonitorControl
+﻿namespace MonitorControl.Interop
 {
+    using System;
+    using System.Drawing;
+    using System.Runtime.InteropServices;
+
     public partial class Win32
     {
         #region Nested type: RECT
@@ -33,20 +33,20 @@ namespace MonitorControl
 
             public RECT(Rectangle bounds)
             {
-                left = bounds.Left;
-                right = bounds.Right;
-                top = bounds.Top;
-                bottom = bounds.Bottom;
+                this.left = bounds.Left;
+                this.right = bounds.Right;
+                this.top = bounds.Top;
+                this.bottom = bounds.Bottom;
             }
 
             public int Width
             {
-                get { return right - left; }
+                get { return this.right - this.left; }
             }
 
             public int Height
             {
-                get { return bottom - top; }
+                get { return this.bottom - this.top; }
             }
         }
 
@@ -224,7 +224,7 @@ namespace MonitorControl
 
             public HRESULT(int value)
             {
-                m_value = value;
+                this.m_value = value;
             }
             public static implicit operator int(HRESULT This)
             {
@@ -264,21 +264,21 @@ namespace MonitorControl
                 if (obj == null)
                     return false;
                 if (obj is HRESULT)
-                    return Equals((HRESULT)obj);
+                    return this.Equals((HRESULT)obj);
                 if (obj is int)
-                    return Equals((int)obj);
+                    return this.Equals((int)obj);
                 return false;
             }
             public override int GetHashCode()
             {
-                return m_value;
+                return this.m_value;
             }
             public override string ToString()
             {
                 System.Reflection.FieldInfo fi;
-                if (!dirCodes.TryGetValue(m_value, out fi))
+                if (!dirCodes.TryGetValue(this.m_value, out fi))
                 {
-                    return m_value.ToString();
+                    return this.m_value.ToString();
                 }
                 object[] o = fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
                 DescriptionAttribute descr = null;
@@ -288,8 +288,8 @@ namespace MonitorControl
             }
             #endregion
 
-            public bool Failed { get { return m_value < 0; } }
-            public bool Succeeded { get { return m_value >= 0; } }
+            public bool Failed { get { return this.m_value < 0; } }
+            public bool Succeeded { get { return this.m_value >= 0; } }
 
             public static bool FAILED(int hr) { return hr < 0; }
             public static bool SUCCEEDED(int hr) { return hr >= 0; }
@@ -311,9 +311,9 @@ namespace MonitorControl
                 if (obj == null)
                     return +1;
                 if (obj is HRESULT)
-                    return CompareTo((HRESULT)obj);
+                    return this.CompareTo((HRESULT)obj);
                 if (obj is int)
-                    return CompareTo((int)obj);
+                    return this.CompareTo((int)obj);
                 throw new System.ArgumentException("Arg_MustBeHRESULT");
             }
             #endregion
@@ -339,10 +339,10 @@ namespace MonitorControl
                 protected string m_description;
                 public DescriptionAttribute(string description)
                 {
-                    m_description = description;
+                    this.m_description = description;
                 }
 
-                public string description { get { return m_description; } }
+                public string description { get { return this.m_description; } }
             }
 
             ///<summary>

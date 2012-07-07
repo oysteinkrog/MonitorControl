@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace MonitorControl
+﻿namespace MonitorControl.Utilities
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+
     /// <summary>
     /// Provides extension methods for <see cref="ICollection{T}"/>.
     /// </summary>

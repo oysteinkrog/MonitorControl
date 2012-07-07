@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace MonitorControl
+﻿namespace MonitorControl.Interop
 {
+    using System;
+
     public partial class Win32
     {
         #region Nested type: User32
