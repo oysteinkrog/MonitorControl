@@ -1,0 +1,8 @@
+﻿<metro:Window x:Class="MonitorControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:metro="http://schemas.codeplex.com/elysium/theme"
+              Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        
+    </Grid>
+</metro:Window>
