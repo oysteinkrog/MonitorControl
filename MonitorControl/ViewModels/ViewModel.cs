@@ -1,8 +1,9 @@
 using System.Collections.ObjectModel;
-using Elysium.Theme.ViewModels;
+using System.Linq;
+using System.Windows.Media;
 using MonitorControl.Model;
 
-namespace MonitorControl
+namespace MonitorControl.ViewModels
 {
     public class ViewModel : ViewModelBase
     {
@@ -12,14 +13,11 @@ namespace MonitorControl
         {
             _monitorModel = monitorModel;
 
-            Monitors = new ObservableCollection<MonitorVM>();
-            foreach (var monitor in _monitorModel.Monitors)
-            {
-                Monitors.Add(new MonitorVM(monitor));
-            }
+            Monitors = new ObservableCollection<MonitorVM>(_monitorModel.Monitors.Select(a=>new MonitorVM(a)));
         }
 
-
         public ObservableCollection<MonitorVM> Monitors { get; private set; }
+
+        public ImageSource TrayIcon { get; private set; }
     }
 }

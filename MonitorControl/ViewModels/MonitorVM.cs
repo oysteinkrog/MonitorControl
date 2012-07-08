@@ -1,11 +1,8 @@
 ﻿using System.Linq;
 using System.Windows.Markup;
-using Elysium.Theme.ViewModels;
 using MonitorControl.Model;
-using phyApi = MonitorControl.Interop.Win32.Dxva2.PhysicalMonitorEnumerationApi;
-using hlaApi = MonitorControl.Interop.Win32.Dxva2.HighlevelMonitorConfigurationApi;
 
-namespace MonitorControl
+namespace MonitorControl.ViewModels
 {
     public class MonitorVM : ViewModelBase
     {

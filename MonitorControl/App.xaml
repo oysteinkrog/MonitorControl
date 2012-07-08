@@ -1,11 +1,14 @@
 ﻿<Application x:Class="MonitorControl.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:MonitorControl"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml" Startup="StartupHandler">
     <Application.Resources>
       <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-          <ResourceDictionary Source="pack://application:,,,/Elysium.Theme;component/Themes/Generic.xaml"/>
+
+          <ResourceDictionary Source="/Elysium;component/Themes/Generic.xaml"/>
+<!--          <ResourceDictionary Source="pack://application:,,,/Elysium;component/Themes/Generic.xaml"/>-->
+          <ResourceDictionary Source="Themes/Window.xaml"/>
         </ResourceDictionary.MergedDictionaries>
       </ResourceDictionary>
     </Application.Resources>
