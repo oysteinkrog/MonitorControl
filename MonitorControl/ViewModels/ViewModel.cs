@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using MonitorControl.Model;
 
 namespace MonitorControl.ViewModels
@@ -14,10 +15,9 @@ namespace MonitorControl.ViewModels
             _monitorModel = monitorModel;
 
             Monitors = new ObservableCollection<MonitorVM>(_monitorModel.Monitors.Select(a=>new MonitorVM(a)));
+
         }
 
         public ObservableCollection<MonitorVM> Monitors { get; private set; }
-
-        public ImageSource TrayIcon { get; private set; }
     }
 }

@@ -2,11 +2,16 @@
 
 namespace MonitorControl.Model
 {
+    public struct MinMaxVal<T>
+    {
+        public T Min { get; set; }
+        public T Max { get; set; }
+        public T Val { get; set; }
+    }
+
     public class PhysicalMonitor
     {
         private readonly Win32.Dxva2.PhysicalMonitorEnumerationApi.PHYSICAL_MONITOR _physicalMonitor;
-        private uint? _brightnessMax;
-        private uint? _brightnessMin;
 
         public PhysicalMonitor(Win32.Dxva2.PhysicalMonitorEnumerationApi.PHYSICAL_MONITOR physicalMonitor)
         {
@@ -18,49 +23,35 @@ namespace MonitorControl.Model
             get { return _physicalMonitor.szPhysicalMonitorDescription; }
         }
 
-        public uint BrightnessMax
+        public MinMaxVal<uint> Brightness
         {
             get
             {
-                if (_brightnessMax.HasValue)
-                    return _brightnessMax.Value;
                 uint min;
                 uint val;
                 uint max;
                 Win32.Dxva2.HighlevelMonitorConfigurationApi.GetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, out min, out val, out max);
-                _brightnessMin = min;
-                _brightnessMax = max;
-                return _brightnessMax.Value;
-            }
-        }
-
-        public uint BrightnessMin
-        {
-            get
-            {
-                if (_brightnessMin.HasValue)
-                    return _brightnessMin.Value;
-                uint min;
-                uint val;
-                uint max;
-                Win32.Dxva2.HighlevelMonitorConfigurationApi.GetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, out min, out val, out max);
-                _brightnessMin = min;
-                _brightnessMax = max;
-                return _brightnessMin.Value;
-            }
-        }
-
-        public uint BrightnessValue
-        {
-            get
-            {
-                uint min, max, val;
-                Win32.Dxva2.HighlevelMonitorConfigurationApi.GetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, out min, out val, out max);
-                return val;
+                return new MinMaxVal<uint>{Min = min, Max = max, Val = val};
             }
             set
             {
-                Win32.Dxva2.HighlevelMonitorConfigurationApi.SetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, value);
+                Win32.Dxva2.HighlevelMonitorConfigurationApi.SetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, value.Val);
+            }
+        }
+
+        public MinMaxVal<uint> Contrast
+        {
+            get
+            {
+                uint min;
+                uint val;
+                uint max;
+                Win32.Dxva2.HighlevelMonitorConfigurationApi.GetMonitorContrast(_physicalMonitor.hPhysicalMonitor, out min, out val, out max);
+                return new MinMaxVal<uint>{Min = min, Max = max, Val = val};
+            }
+            set
+            {
+                Win32.Dxva2.HighlevelMonitorConfigurationApi.SetMonitorContrast(_physicalMonitor.hPhysicalMonitor, value.Val);
             }
         }
 
@@ -68,17 +59,29 @@ namespace MonitorControl.Model
         {
             get
             {
-                uint min;
-                uint val;
-                uint max;
-                Win32.Dxva2.HighlevelMonitorConfigurationApi.GetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, out min, out val, out max);
-
-                return val / (double)(max - min);
+                var v = Brightness;
+                return v.Val / (double)(v.Max - v.Min);
             }
             set
             {
-                double percent = (BrightnessMax - BrightnessMin) * value;
-                Win32.Dxva2.HighlevelMonitorConfigurationApi.SetMonitorBrightness(_physicalMonitor.hPhysicalMonitor, (uint)percent);
+                var v = Brightness;
+                double val = (v.Max - v.Min) * value;
+                Brightness = new MinMaxVal<uint>() {Val = (uint) val};
+            }
+        }
+
+        public double ContrastValuePercent
+        {
+            get
+            {
+                var v = Contrast;
+                return v.Val / (double)(v.Max - v.Min);
+            }
+            set
+            {
+                var v = Contrast;
+                double val = (v.Max - v.Min) * value;
+                Contrast = new MinMaxVal<uint>() { Val = (uint)val };
             }
         }
     }

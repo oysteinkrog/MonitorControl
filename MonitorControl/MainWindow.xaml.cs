@@ -32,22 +32,6 @@ namespace MonitorControl
             DataContext = _viewModel = new ViewModel(_monitorModel);
 
 
-            TrayIcon.Icon = SystemIcons.Warning;
-
-//            using (Bitmap bmp = new Bitmap(16, 16))
-//            {
-//                using (var g = Graphics.FromImage(bmp))
-//                {
-//                    var p = new Pen(Color.Green);
-//                    g.DrawRectangle(p, 0, 0, 16, 16);
-//                    //                    g.DrawString("50",new Font(rontFamily.));
-//                     = Imaging.CreateBitmapSourceFromHBitmap(bmp.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty,
-//                                                                     BitmapSizeOptions.FromEmptyOptions());
-//
-//                }
-//            }
-
-
         }
 
 
@@ -100,24 +84,28 @@ namespace MonitorControl
             Application.Current.ApplyTheme(null, null, System.Windows.Media.Brushes.Black);
         }
 
-        private void NotificationClick(object sender, RoutedEventArgs e)
+        private void HandleStateChanged(object sender, EventArgs e)
         {
-            NotificationManager.TryPush("Message", "The quick brown fox jumps over the lazy dog");
+            if (WindowState == WindowState.Minimized)
+            {
+                ShowInTaskbar = false;
+            }
+            else if (WindowState == WindowState.Normal)
+            {
+                ShowInTaskbar = true;
+            }
         }
 
-        private void DonateClick(object sender, RoutedEventArgs e)
+        private void HandleTrayMouseDoubleClick(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KNYYZ7RM6LBCG");
-        }
-
-        private void LicenseClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://elysium.codeplex.com/license");
-        }
-
-        private void AuthorsClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://elysium.codeplex.com/team/view");
+            if (WindowState == WindowState.Minimized)
+            {
+                WindowState = WindowState.Normal;
+            }
+            else if (WindowState == WindowState.Normal)
+            {
+                WindowState = WindowState.Minimized;
+            }
         }
     }
 }

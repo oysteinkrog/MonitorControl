@@ -19,8 +19,28 @@
   
               Title="MonitorControl"
               
-              d:DataContext="{d:DesignInstance Type=ViewModels:ViewModel}">
-  
+              d:DataContext="{d:DesignInstance Type=ViewModels:ViewModel}"
+              
+              StateChanged="HandleStateChanged"
+              
+              Icon="Resources\Brightness_white.ico"
+              >
+
+  <metro:Window.Resources>
+    <ResourceDictionary>
+      <GeometryGroup x:Key="SampleIcon16px">
+        <RectangleGeometry Rect="2.5,2.5,1,1"/>
+        <RectangleGeometry Rect="7.5,2.5,1,1"/>
+        <RectangleGeometry Rect="12.5,2.5,1,1"/>
+        <RectangleGeometry Rect="2.5,7.5,1,1"/>
+        <RectangleGeometry Rect="7.5,7.5,1,1"/>
+        <RectangleGeometry Rect="12.5,7.5,1,1"/>
+        <RectangleGeometry Rect="2.5,12.5,1,1"/>
+        <RectangleGeometry Rect="7.5,12.5,1,1"/>
+        <RectangleGeometry Rect="12.5,12.5,1,1"/>
+      </GeometryGroup>
+    </ResourceDictionary>
+  </metro:Window.Resources>
   <metro:Window.ApplicationBar>
     <metro:ApplicationBar>
       <metro:DropDownCommandButton Header="Theme type"
@@ -189,42 +209,11 @@
     </metro:ApplicationBar>
   </metro:Window.ApplicationBar>
 
-
+  
   <TabControl Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}">
+
     <TabItem Header="Brightness">
       <Grid>
-
-        <tb:TaskbarIcon
-          x:Name="TrayIcon"
-          IconSource="{Binding TrayIcon}"
-          ToolTipText="MonitorControl">
-
-          <tb:TaskbarIcon.TrayPopup>
-            <Border
-              Background="White"
-              BorderBrush="Orange"
-              BorderThickness="2"
-              CornerRadius="4"
-              Width="Auto"
-              Height="Auto"
-            >
-
-              <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
-                <ListBox.ItemTemplate>
-                  <DataTemplate DataType="ViewModels:MonitorVM">
-                    <DockPanel LastChildFill="true">
-                      <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="150"></TextBlock>
-                      <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
-                      <Slider MinWidth="100" Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
-                              Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"></Slider>
-                    </DockPanel>
-                  </DataTemplate>
-                </ListBox.ItemTemplate>
-              </ListBox>
-            </Border>
-          </tb:TaskbarIcon.TrayPopup>
-        </tb:TaskbarIcon>
-
         <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
           <ListBox.ItemTemplate>
             <DataTemplate DataType="ViewModels:MonitorVM">
@@ -232,13 +221,136 @@
                 <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
                 <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
                 <Slider MinWidth="100" Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
-                        Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"></Slider>
+                        Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"
+                        IsMoveToPointEnabled="true" />
               </DockPanel>
             </DataTemplate>
           </ListBox.ItemTemplate>
         </ListBox>
       </Grid>
-      
+    </TabItem>
+
+    <TabItem Header="Contrast">
+      <Grid>
+        <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+          <ListBox.ItemTemplate>
+            <DataTemplate DataType="ViewModels:MonitorVM">
+              <DockPanel LastChildFill="true">
+                <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                <TextBlock Margin="5" Text="{Binding ContrastPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
+                <Slider MinWidth="100" Margin="5" Value="{Binding Contrast}" IsEnabled="{Binding CanSetContrast}"
+                        Maximum="{Binding ContrastMax}" Minimum="{Binding ContrastMin}" Width="Auto"
+                        IsMoveToPointEnabled="true" />
+              </DockPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
+
+    <TabItem Header="Profiles">
+      <Grid>
+      </Grid>
+
+    </TabItem>
+
+    <TabItem Header="TrayPlaceHolder" Visibility="Collapsed">
+      <tb:TaskbarIcon
+          x:Name="TrayIcon"
+          IconSource="Resources\Brightness_white.ico"
+          ToolTipText="MonitorControl"
+          PopupActivation="LeftClick"
+          
+          TrayMouseDoubleClick="HandleTrayMouseDoubleClick"
+          >
+
+        <tb:TaskbarIcon.ContextMenu>
+          <ContextMenu>
+            <MenuItem Header="Brightness">
+              <MenuItem.Icon>
+                <Path Data="{StaticResource SampleIcon16px}"
+                      Fill="{DynamicResource AccentBrush}"
+                      Stroke="{DynamicResource AccentBrush}"
+                      Width="16" Height="16"/>
+              </MenuItem.Icon>
+              <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                  <DataTemplate DataType="ViewModels:MonitorVM">
+                    <DockPanel LastChildFill="true">
+                      <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                      <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
+                      <Slider MinWidth="100" Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
+                              Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"
+                              IsMoveToPointEnabled="true" />
+                    </DockPanel>
+                  </DataTemplate>
+                </ListBox.ItemTemplate>
+              </ListBox>
+            </MenuItem>
+            <MenuItem Header="Contrast">
+              <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                  <DataTemplate DataType="ViewModels:MonitorVM">
+                    <DockPanel LastChildFill="true">
+                      <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                      <TextBlock Margin="5" Text="{Binding ContrastPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
+                      <Slider MinWidth="100" Margin="5" Value="{Binding Contrast}" IsEnabled="{Binding CanSetContrast}"
+                              Maximum="{Binding ContrastMax}" Minimum="{Binding ContrastMin}" Width="Auto"
+                              IsMoveToPointEnabled="true" />
+                    </DockPanel>
+                  </DataTemplate>
+                </ListBox.ItemTemplate>
+              </ListBox>
+            </MenuItem>
+            
+<!--            <MenuItem Header="First item"/>-->
+<!--            <MenuItem Header="First checkable item"-->
+<!--                      IsCheckable="True"-->
+<!--                      IsChecked="True"/>-->
+<!--            <MenuItem Header="First item with icon">-->
+<!--            </MenuItem>-->
+<!--            <MenuItem Header="First expandable item">-->
+<!--                <MenuItem Header="Second checkable item"-->
+<!--                        IsCheckable="True"-->
+<!--                        IsChecked="True"/>-->
+<!--              <MenuItem Header="Second disabled item"-->
+<!--                        IsEnabled="False"/>-->
+<!--              <MenuItem Header="Second expandable item">-->
+<!--                <MenuItem Header="3rd item"/>-->
+<!--                <MenuItem Header="4th item"/>-->
+<!--              </MenuItem>-->
+<!--            </MenuItem>-->
+<!--            <MenuItem Header="First disabled item"-->
+<!--                      IsEnabled="False"/>-->
+          </ContextMenu>
+        </tb:TaskbarIcon.ContextMenu>
+
+        <tb:TaskbarIcon.TrayPopup>
+          <Border
+            Background="{DynamicResource BackgroundBrush}"
+            BorderBrush="{DynamicResource MiddleLightBrush}"
+            BorderThickness="0"
+            Width="Auto"
+            Height="Auto"
+            >
+
+            <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+              <ListBox.ItemTemplate>
+                <DataTemplate DataType="ViewModels:MonitorVM">
+                  <DockPanel LastChildFill="true">
+                    <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="150"></TextBlock>
+                    <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
+                    <Slider MinWidth="100" Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
+                            Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"
+                            IsMoveToPointEnabled="true" />
+                  </DockPanel>
+                </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+          </Border>
+        </tb:TaskbarIcon.TrayPopup>
+      </tb:TaskbarIcon>
+
     </TabItem>
   </TabControl>
   
