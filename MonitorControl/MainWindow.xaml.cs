@@ -27,13 +27,17 @@ namespace MonitorControl
         {
             InitializeComponent();
 
+            SourceInitialized += HandleSourceInitialized;
+
             // temporary setup 
             _monitorModel = new MultiMonController();
             DataContext = _viewModel = new ViewModel(_monitorModel);
-
-
         }
 
+        private void HandleSourceInitialized(object sender, EventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
 
         private static readonly string Windows = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
         private static readonly string SegoeUI = Windows + @"\Fonts\SegoeUI.ttf";
