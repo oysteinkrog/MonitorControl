@@ -14,8 +14,9 @@
               design:ThemeManager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
               design:ThemeManager.ContrastBrush="White"
               
+              Width="600" Height="400"
               WindowStartupLocation="CenterScreen"
-              Width="1024" Height="540"
+              
   
               Title="MonitorControl"
               
