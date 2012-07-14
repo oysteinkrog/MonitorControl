@@ -6,3 +6,6 @@ obj
 TestResults
 /packages
 /_ReSharper.*
+*.ncrunchsolution
+*.suo
+*.DotSettings.user
