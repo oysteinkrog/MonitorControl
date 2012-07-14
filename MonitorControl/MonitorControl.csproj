@@ -77,10 +77,12 @@
     </ApplicationDefinition>
     <Compile Include="Interop\ClassStyles.cs" />
     <Compile Include="Model\HighLevelMonitor.cs" />
+    <Compile Include="Model\MinMaxVal.cs" />
     <Compile Include="Model\Monitor.cs" />
     <Compile Include="Model\MultiMonWindow.cs" />
     <Compile Include="Model\OS.cs" />
     <Compile Include="Model\PhysicalMonitor.cs" />
+    <Compile Include="Model\RGBSetting.cs" />
     <Compile Include="ViewModels\MonitorVM.cs" />
     <Compile Include="Utilities\CollectionExtensions.cs" />
     <Compile Include="Interop\Dxva2.cs" />

@@ -8,7 +8,8 @@
               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
               xmlns:tb="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.Wpf.TaskbarNotification"
               xmlns:design="http://schemas.codeplex.com/elysium/theme/design"
-              xmlns:ViewModels="clr-namespace:MonitorControl.ViewModels" mc:Ignorable="d"
+              xmlns:ViewModels="clr-namespace:MonitorControl.ViewModels"
+              xmlns:Model="clr-namespace:MonitorControl.Model" mc:Ignorable="d"
               
               design:ThemeManager.Theme="Dark"
               design:ThemeManager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
@@ -20,7 +21,7 @@
   
               Title="MonitorControl"
               
-              d:DataContext="{d:DesignInstance Type=ViewModels:ViewModel}"
+              d:DataContext="{d:DesignInstance Type=ViewModels:ViewModel, IsDesignTimeCreatable=true}"
               
               StateChanged="HandleStateChanged"
               
@@ -221,7 +222,7 @@
               <DockPanel LastChildFill="true">
                 <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
                 <TextBlock Margin="5" Text="{Binding BrightnessPercent, StringFormat={}{0:p0}}" Width="40"></TextBlock>
-                <Slider MinWidth="100" Margin="5" Value="{Binding Brightness}" IsEnabled="{Binding CanSetBrightness}"
+                <Slider MinWidth="100" Margin="5" Value="{Binding Contrast}" IsEnabled="{Binding CanSetBrightness}"
                         Maximum="{Binding BrightnessMax}" Minimum="{Binding BrightnessMin}" Width="Auto"
                         IsMoveToPointEnabled="true" />
               </DockPanel>
@@ -248,9 +249,89 @@
         </ListBox>
       </Grid>
     </TabItem>
-
+    
+    <TabItem Header="Drive">
+      <Grid>
+        <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+          <ListBox.ItemTemplate>
+            <DataTemplate DataType="ViewModels:MonitorVM">
+              <DockPanel LastChildFill="true">
+                <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                <StackPanel Orientation="Vertical">
+                	<DockPanel Height="Auto" Width="Auto" DataContext="{Binding DriveRed, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                		<TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                		<Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto"  />
+                	</DockPanel>
+                	<DockPanel Height="Auto" Width="Auto" DataContext="{Binding DriveGreen, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                		<TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                		<Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto" d:LayoutOverrides="Height" />
+                	</DockPanel>
+                	<DockPanel Height="Auto" Width="Auto" DataContext="{Binding DriveBlue, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                		<TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                		<Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto" d:LayoutOverrides="Height" />
+                	</DockPanel>
+                </StackPanel>
+              </DockPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
+    
+    <TabItem Header="Gain">
+      <Grid>
+        <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+          <ListBox.ItemTemplate>
+            <DataTemplate DataType="ViewModels:MonitorVM">
+              <DockPanel LastChildFill="true">
+                <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                <StackPanel Orientation="Vertical">
+                  <DockPanel Height="Auto" Width="Auto" DataContext="{Binding GainRed, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                    <TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                    <Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto"  />
+                  </DockPanel>
+                  <DockPanel Height="Auto" Width="Auto" DataContext="{Binding GainGreen, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                    <TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                    <Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto" d:LayoutOverrides="Height" />
+                  </DockPanel>
+                  <DockPanel Height="Auto" Width="Auto" DataContext="{Binding GainBlue, Mode=OneWay}" d:DataContext="{d:DesignInstance Type={x:Type Model:MinMaxValUint}}">
+                    <TextBlock Margin="0" Text="{Binding Val}" Width="40" VerticalAlignment="Top"/>
+                    <Slider MinWidth="100" Value="{Binding Val}" 
+                			Maximum="{Binding Max}" Minimum="{Binding Min}" Width="Auto"
+                			IsMoveToPointEnabled="true" Height="Auto" d:LayoutOverrides="Height" />
+                  </DockPanel>
+                </StackPanel>
+              </DockPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
     <TabItem Header="Profiles">
       <Grid>
+        <ListBox ItemsSource="{Binding Monitors}" HorizontalContentAlignment="Stretch">
+          <ListBox.ItemTemplate>
+            <DataTemplate DataType="ViewModels:MonitorVM">
+              <DockPanel LastChildFill="true">
+                <TextBlock Margin="5" Text="{Binding Name}" TextTrimming="WordEllipsis" Width="200"></TextBlock>
+                <WrapPanel Orientation="Horizontal">
+                  <Button Margin="5" Content="Restore color defaults" Command="{Binding RestoreColorDefaultsCommand}"></Button>
+                  <Button Margin="5" Content="Restore all defaults" Command="{Binding RestoreAllDefaultsCommand}"></Button>
+                </WrapPanel>
+              </DockPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
       </Grid>
 
     </TabItem>

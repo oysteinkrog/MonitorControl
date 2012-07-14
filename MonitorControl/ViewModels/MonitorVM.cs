@@ -1,5 +1,7 @@
 ﻿using System.Linq;
+using System.Windows.Input;
 using System.Windows.Markup;
+using Microsoft.Expression.Interactivity.Core;
 using MonitorControl.Model;
 
 namespace MonitorControl.ViewModels
@@ -9,6 +11,8 @@ namespace MonitorControl.ViewModels
         private readonly Monitor _monitor;
         private readonly object _syncRoot = new object();
         private HighLevelMonitor _hlaMonitor;
+        private ICommand _restoreColorDefaultsCommand;
+        private ICommand _restoreAllDefaultsCommand;
 
 
         public MonitorVM(Monitor monitor)
@@ -30,17 +34,27 @@ namespace MonitorControl.ViewModels
         public uint Brightness
         {
             get { return _hlaMonitor.PhysicalMonitors.First().Brightness.Val; }
-            set { _hlaMonitor.PhysicalMonitors.First().Brightness = new MinMaxVal<uint> {Val = value}; }
+            set
+            {
+                foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                {
+                    pm.Brightness.Val = value;
+                }
+            }
         }
-
 
         [DependsOn("Brightness")]
         public double BrightnessPercent
         {
-            get { return _hlaMonitor.PhysicalMonitors.First().BrightnessValuePercent; }
-            set { _hlaMonitor.PhysicalMonitors.First().BrightnessValuePercent = value; }
+            get { return _hlaMonitor.PhysicalMonitors.First().Brightness.MinMaxValToPercent(); }
+            set
+            {
+                foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                {
+                    pm.Brightness.Val = pm.Brightness.ValFromPercent(value);
+                }
+            }
         }
-
 
         public uint ContrastMax
         {
@@ -55,15 +69,59 @@ namespace MonitorControl.ViewModels
         public uint Contrast
         {
             get { return _hlaMonitor.PhysicalMonitors.First().Contrast.Val; }
-            set { _hlaMonitor.PhysicalMonitors.First().Contrast = new MinMaxVal<uint> {Val = value}; }
+            set
+            {
+                foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                {
+                    pm.Contrast.Val = value;
+                }
+            }
         }
 
-        [DependsOn("Contrast")]
+        public MinMaxVal<uint> GainRed
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Gain.Red; }
+        }
+        public MinMaxVal<uint> GainBlue
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Gain.Blue; }
+        }
+        public MinMaxVal<uint> GainGreen
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Gain.Green; }
+        }     
+        public MinMaxVal<uint> DriveRed
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Drive.Red; }
+        }
+        public MinMaxVal<uint> DriveBlue
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Drive.Blue; }
+        }
+        public MinMaxVal<uint> DriveGreen
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Drive.Green; }
+        }
+
+
+    [DependsOn("Contrast")]
         public double ContrastPercent
         {
-            get { return _hlaMonitor.PhysicalMonitors.First().ContrastValuePercent; }
-            set { _hlaMonitor.PhysicalMonitors.First().ContrastValuePercent = value; }
+            get { return _hlaMonitor.PhysicalMonitors.First().Contrast.MinMaxValToPercent(); }
+            set
+            {
+                foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                {
+                    pm.Contrast.Val = pm.Contrast.ValFromPercent(value);
+                }
+            }
         }
+
+        public string ColorTemperature
+        {
+            get { return _hlaMonitor.PhysicalMonitors.First().Description; }
+        }
+
 
         public string Name
         {
@@ -84,6 +142,34 @@ namespace MonitorControl.ViewModels
             {
                 // we can't trust the "capabilities", use simple check instead   
                 return (ContrastMax - ContrastMin) > 0;
+            }
+        }
+
+        public ICommand RestoreColorDefaultsCommand
+        {
+            get
+            {
+                return _restoreColorDefaultsCommand ?? (_restoreColorDefaultsCommand = new ActionCommand(() =>
+                    {
+                        foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                        {
+                            pm.RestoreColorDefaults();
+                        }
+                    }));
+            }
+        }
+
+        public ICommand RestoreAllDefaultsCommand
+        {
+            get
+            {
+                return _restoreAllDefaultsCommand ?? (_restoreAllDefaultsCommand = new ActionCommand(() =>
+                    {
+                        foreach (var pm in _hlaMonitor.PhysicalMonitors)
+                        {
+                            pm.RestoreAllDefaults();
+                        }
+                    }));
             }
         }
 
