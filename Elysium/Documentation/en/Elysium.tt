@@ -1,0 +1,116 @@
+﻿<#@ template language="C#" hostSpecific="true" #>
+<#@ output extension=".xml" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ assembly name="System.Xml.Linq.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#
+    var root = Host.ResolvePath(@"..\..\");
+    
+    var paths = new List<string>();
+    
+    /*paths.Add(@"AccentBrushes.en.xml");
+    paths.Add(@"Theme.en.xml");
+    paths.Add(@"ThemeManager.en.xml");
+    paths.Add(@"Design\ThemeManager.en.xml");
+
+    paths.Add(@"Parameters\CheckBox.en.xml");
+    paths.Add(@"Parameters\ComboBox.en.xml");
+    paths.Add(@"Parameters\CommandButtons.en.xml");
+    paths.Add(@"Parameters\DropDown.en.xml");
+    paths.Add(@"Parameters\General.en.xml");
+    paths.Add(@"Parameters\MenuBase.en.xml");
+    paths.Add(@"Parameters\MenuItem.en.xml");
+    paths.Add(@"Parameters\Progress.en.xml");
+    paths.Add(@"Parameters\ScrollBar.en.xml");
+    paths.Add(@"Parameters\Slider.en.xml");
+    paths.Add(@"Parameters\TabControl.en.xml");
+    paths.Add(@"Parameters\TabItem.en.xml");
+    paths.Add(@"Parameters\ToggleSwitch.en.xml");
+    paths.Add(@"Parameters\Window.en.xml");
+    
+    paths.Add(@"Extensions\Tree helpers\ThemeManagerExtensions.en.xml");
+    paths.Add(@"Extensions\Tree helpers\LogicalTreeHelperExtensions.en.xml");
+    paths.Add(@"Extensions\Tree helpers\VisualTreeHelperExtensions.en.xml");
+    
+    paths.Add(@"Converters\AngleToCoordinateConverter.en.xml");
+    paths.Add(@"Converters\PercentToAngleConverter.en.xml");
+    
+    paths.Add(@"Converters\IsGreaterThanConverter.en.xml");
+    paths.Add(@"Converters\NumberPositiveToNegativeConverter.en.xml");
+    paths.Add(@"Converters\ThicknessPositiveToNegativeConverter.en.xml");
+    
+    paths.Add(@"Converters\DoubleToGridLengthConverter.en.xml");
+    paths.Add(@"Converters\GridLengthToDoubleConverter.en.xml");
+    paths.Add(@"Converters\DoubleToThicknessConverter.en.xml");
+    paths.Add(@"Converters\ThicknessToDoubleConverter.en.xml");
+    paths.Add(@"Converters\ThicknessConverter.en.xml");
+    
+    paths.Add(@"Controls\ApplicationBar\ApplicationBarDock.en.xml");
+    paths.Add(@"Controls\ApplicationBar\ApplicationBarTransitionMode.en.xml");
+    
+    paths.Add(@"Controls\CommandButtons\DropDownDirection.en.xml");
+    
+    paths.Add(@"Controls\Progress\ProgressState.en.xml");
+    
+    paths.Add(@"Controls\ApplicationBar\Automation\ApplicationBarAutomationPeer.en.xml");
+    
+    paths.Add(@"Controls\CommandButtons\Automation\CommandButtonBaseAutomationPeer.en.xml");
+    paths.Add(@"Controls\CommandButtons\Automation\CommandButtonAutomationPeer.en.xml");
+    paths.Add(@"Controls\CommandButtons\Automation\DropDownCommandButtonAutomationPeer.en.xml");
+    paths.Add(@"Controls\CommandButtons\Automation\ToggleCommandButtonAutomationPeer.en.xml");
+    
+    paths.Add(@"Controls\ToggleSwitch\Automation\ToggleSwitchAutomationPeer.en.xml");
+    
+    paths.Add(@"Controls\Progress\Automation\ProgressAutomationPeer.en.xml");
+    
+    paths.Add(@"Controls\Menus\Automation\SubmenuAutomationPeer.en.xml");
+    
+    paths.Add(@"Controls\ApplicationBar\ApplicationBar.en.xml");
+    paths.Add(@"Controls\ApplicationBar\ApplicationBarPanel.en.xml");
+
+    paths.Add(@"Controls\CommandButtons\Primitives\CommandButtonBase.en.xml");
+    paths.Add(@"Controls\CommandButtons\CommandButton.en.xml");
+    paths.Add(@"Controls\CommandButtons\DropDownCommandButton.en.xml");
+    paths.Add(@"Controls\CommandButtons\ToggleCommandButton.en.xml");
+
+    paths.Add(@"Controls\Menus\Submenu.en.xml");
+
+    paths.Add(@"Controls\Progress\Primitives\ProgressBase.ru.xml");
+    paths.Add(@"Controls\Progress\ProgressBar.ru.xml");
+    paths.Add(@"Controls\Progress\ProgressRing.ru.xml");
+
+    paths.Add(@"Controls\ToggleSwitch\ToggleSwitch.ru.xml");
+
+    paths.Add(@"Controls\Window\Window.ru.xml");
+    paths.Add(@"Controls\Window\WindowCommands.ru.xml");*/
+    
+    var documentation = new XDocument(new XDeclaration("1.0", "utf-8", "yes"));
+    
+    var doc = new XElement("doc");
+    doc.Add(new XElement("assembly", new XElement("name", "Elysium")));
+    
+    var members = new XElement("members");
+    
+    foreach (var path in paths)
+    {
+        var partOfDocumentation = XDocument.Load(Path.Combine(root, path)).Root.Element("members").Elements();
+        foreach (var declaration in partOfDocumentation)
+        {
+            declaration.Name = "member";
+            members.Add(declaration);
+        }
+    }
+    
+    doc.Add(members);
+    
+    documentation.Add(doc);
+#>
+<#= documentation.Declaration #>
+<#= documentation #>

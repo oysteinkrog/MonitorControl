@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.ThemeManager">
+      <summary>
+        Представляет класс, управляющий базовыми настройками темы.
+      </summary>
+    </type>
+    <property name="P:Elysium.ThemeManager.Theme">
+      <summary>
+        Возвращает или задаёт значение, указывающее на текующий тип темы.
+      </summary>
+      <value>
+        Одно из значений перечисления <see cref="T:Elysium.Theme"/> или null, если элемент управления должен наследовать значение от родителя или использовать значение, указанное для всего приложения. Значение по умолчанию — null.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.ThemeManager.ThemeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new TabControl();
+          var currentValue = ThemeManager.GetTheme(control);
+          ThemeManager.SetTheme(control, null);
+        </code>
+        <code lang="XAML">
+          &lt;TabControl metro:ThemeManager.Theme="Light"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.ThemeManager.ThemeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.ThemeManager.Theme"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.ThemeManager.Theme"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.ThemeManager.GetTheme(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.ThemeManager.Theme"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Текущий тип темы для указанного элемента управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.ThemeManager.SetTheme(System.Windows.FrameworkElement,System.Nullable{Elysium.Theme})">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.ThemeManager.Theme"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Новый тип темы для указанного элемента управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.ThemeManager.AccentBrush">
+      <summary>
+        Возвращает или задаёт акцентирующий цвет.
+      </summary>
+      <value>Кисть, содержащая акцентирующий цвет, или null, если элемент управления должен наследовать значение от родителя или использовать значение, указанное для всего приложения. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.ThemeManager.AccentBrushProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new TabControl();
+          var currentValue = ThemeManager.GetAccentBrush(control);
+          ThemeManager.SetAccentBrush(control, null);
+        </code>
+        <code lang="XAML">
+          &lt;TabControl metro:ThemeManager.AccentBrush="{DynamicResource BlueBrush}"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.ThemeManager.AccentBrushProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.ThemeManager.AccentBrush"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.ThemeManager.AccentBrush"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.ThemeManager.GetAccentBrush(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.ThemeManager.AccentBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Текущий акцентирующий цвет для указанного элемента управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.ThemeManager.SetAccentBrush(System.Windows.FrameworkElement,System.Windows.Media.SolidColorBrush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.ThemeManager.AccentBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Акцентирующий цвет для указанного элемента управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.ThemeManager.ContrastBrush">
+      <summary>
+        Возвращает или задаёт контрастный (к акцентирующему) цвет.
+      </summary>
+      <value>Кисть, содержащая контрастный цвет, или null, если элемент управления должен наследовать значение от родителя или использовать значение, указанное для всего приложения. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.ThemeManager.ContrastBrushProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new TabControl();
+          var currentValue = ThemeManager.GetContrastBrush(control);
+          ThemeManager.SetContrastBrush(control, null);
+        </code>
+        <code lang="XAML">
+          &lt;TabControl metro:ThemeManager.ContrastBrush="White"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.ThemeManager.ContrastBrushProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.ThemeManager.ContrastBrush"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.ThemeManager.ContrastBrush"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.ThemeManager.GetContrastBrush(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.ThemeManager.ContrastBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Текущий контрастный цвет для указанного элемента управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.ThemeManager.SetContrastBrush(System.Windows.FrameworkElement,System.Windows.Media.SolidColorBrush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.ThemeManager.ContrastBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Контрастный цвет для указанного элемента управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.ThemeManager.ApplyTheme(System.Windows.Application,System.Nullable{Elysium.Theme},System.Windows.Media.SolidColorBrush,System.Windows.Media.SolidColorBrush)">
+      <summary>
+        Задаёт настройки темы для всего приложения.
+      </summary>
+      <param name="application">Экземпляр приложения, для которого задаются настройки темы.</param>
+      <param name="theme">
+        Одно из значений перечисления <see cref="T:Elysium.Theme"/> или null, если необходимо использовать ранее заданный тип темы.
+      </param>
+      <param name="accentBrush">Кисть, содержащая акцентирующий цвет, или null, если необходимо использовать ранее заданный цвет.</param>
+      <param name="contrastBrush">Кисть, содержащая контрастный цвет, или null, если необходимо использовать ранее заданный цвет.</param>
+      <remarks>
+        Если настройки задаются для приложения в первый (после запуска) раз, то ни одно из значений не должно быть null.
+      </remarks>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="application"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">application != null</requires>
+    </method>
+    <method name="M:Elysium.ThemeManager.RemoveTheme(System.Windows.Application,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+        Отключает тему в указанном приложении.
+      </summary>
+      <param name="application">Экземпляр приложения, для которого производится отключение темы.</param>
+      <param name="isRemoveTheme">Указывает, должен ли из параметров удаляться тип темы.</param>
+      <param name="isRemoveAccentBrush">Указывает, должен ли из параметров удаляться акцентирующий цвет.</param>
+      <param name="isRemoveContrastBrush">Указывает, должен ли из параметров удаляться контрастный цвет.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="application"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">application != null</requires>
+    </method>
+  </members>
+</doc>

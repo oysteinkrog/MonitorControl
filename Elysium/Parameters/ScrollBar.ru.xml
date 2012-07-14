@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.ScrollBar">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.ScrollBar.ArrowSize">
+      <summary>
+        Возвращает или задаёт размер указателя (стрелки) в элементе управления <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/>.
+      </summary>
+      <value>
+        Размер указателя (стрелки). Значение по умолчанию — 6px.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ScrollBar.ArrowSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ScrollBar();
+          var currentValue = Parameters.ScrollBar.GetArrowSize(control);
+          Parameters.ScrollBar.SetArrowSize(control, 6d);
+        </code>
+        <code lang="XAML">
+          &lt;ScrollBar params:ScrollBar.ArrowSize="6px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ScrollBar.ArrowSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ScrollBar.ArrowSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ScrollBar.ArrowSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ScrollBar.GetArrowSize(System.Windows.Controls.Primitives.ScrollBar)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ScrollBar.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Размер указателя.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ScrollBar.SetArrowSize(System.Windows.Controls.Primitives.ScrollBar,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ScrollBar.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Размер указателя.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

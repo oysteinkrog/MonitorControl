@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.DropDownCommandButton">
+      <summary>
+        Кнопка управления с выпадающим меню.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.DropDownCommandButton.Submenu">
+      <summary>
+        Возвращает или задаёт выпадающее меню.
+      </summary>
+      <value>Меню. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.DropDownCommandButton.SubmenuProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.DropDownCommandButton.SubmenuProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnSubmenuChanged(Elysium.Controls.Submenu,Elysium.Controls.Submenu)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/>.
+      </summary>
+      <param name="oldSubmenu">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/>.
+      </param>
+      <param name="newSubmenu">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.DropDownCommandButton.HasSubmenu">
+      <summary>
+        Возвращает значение, указывающее имеет ли выпадающее меню значение null в данный момент.
+      </summary>
+      <value>
+        True, если значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.Submenu"/> не равно null, в противном случае False. Значение по умолчанию — False.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.DropDownCommandButton.HasSubmenuProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.DropDownCommandButton.HasSubmenuProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.HasSubmenu"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.HasSubmenu"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnHasSubmenuChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.HasSubmenu"/>.
+      </summary>
+      <param name="oldHasSubmenu">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.HasSubmenu"/>.
+      </param>
+      <param name="newHasSubmenu">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.HasSubmenu"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen">
+      <summary>
+        Возвращает или задаёт значение, указывающее, открыто ли в данный момент выпадающее меню.
+      </summary>
+      <value>True, если выпадающее меню открыто; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.DropDownCommandButton.IsDropDownOpenProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.DropDownCommandButton.IsDropDownOpenProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnIsDropDownOpenChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen"/>.
+      </summary>
+      <param name="oldIsDropDownOpen">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen"/>.
+      </param>
+      <param name="newIsDropDownOpen">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.IsDropDownOpen"/>.
+      </param>
+    </method>
+    <event name="E:Elysium.Controls.DropDownCommandButton.DropDownOpened">
+      <summary>
+        Событие генерируется при открытии выпадающего меню.
+      </summary>
+    </event>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnDropDownOpened(System.EventArgs)">
+      <summary>
+        Вызывается при генерации события <see cref="E:Elysium.Controls.DropDownCommandButton.DropDownOpened"/>.
+      </summary>
+      <param name="e">Аргументы события.</param>
+    </method>
+    <event name="E:Elysium.Controls.DropDownCommandButton.DropDownClosed">
+      <summary>
+        Событие генерируется при закрытии выпадающего меню.
+      </summary>
+    </event>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnDropDownClosed(System.EventArgs)">
+      <summary>
+        Вызывается при генерации события <see cref="E:Elysium.Controls.DropDownCommandButton.DropDownClosed"/>.
+      </summary>
+      <param name="e">Аргументы события.</param>
+    </method>
+    <property name="P:Elysium.Controls.DropDownCommandButton.DropDownDirection">
+      <summary>
+        Возвращает или задаёт направление выпадающего меню.
+      </summary>
+      <value>Одно из значений перечисления <see cref="T:Elysium.Controls.DropDownDirection"/>. Значение по умолчанию — <see cref="F:Elysium.Controls.DropDownDirection.Up">DropDownDirection.Up</see>.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.DropDownCommandButton.DropDownDirectionProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.DropDownCommandButton.DropDownDirectionProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.DropDownDirection"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.DropDownDirection"/>.
+      </value>
+    </field>
+    <property name="P:Elysium.Controls.DropDownCommandButton.MaxDropDownHeight">
+      <summary>
+        Возвращает или задаёт максимальный размер выпадающего меню.
+      </summary>
+      <value>Максимальный размер выпадающего меню. Значение по умолчанию — 300px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.DropDownCommandButton.MaxDropDownHeightProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.DropDownCommandButton.MaxDropDownHeightProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.MaxDropDownHeight"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.DropDownCommandButton.MaxDropDownHeight"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnCreateAutomationPeer">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnApplyTemplate">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.DropDownCommandButton.OnClick">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

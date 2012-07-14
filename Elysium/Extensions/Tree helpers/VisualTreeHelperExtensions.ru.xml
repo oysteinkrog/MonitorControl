@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Extensions.VisualTreeHelperExtensions">
+      <summary>
+        Предоставляет методы расширения для поиска по визуальному дереву элементов WPF.
+      </summary>
+    </type>
+    <method name="M:Elysium.Extensions.VisualTreeHelperExtensions.FindParent``1(System.Windows.DependencyObject)">
+      <summary>
+        Осуществляет поиск родителя указанного объекта в визуальном дереве элементов WPF.
+      </summary>
+      <typeparam name="T">Тип родителя.</typeparam>
+      <param name="reference">Элемент, для которого осуществляется поиск родителя.</param>
+      <returns>Родитель или null, если среди предков нет объектов указанного типа.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.VisualTreeHelperExtensions.FindTopLevelParent(System.Windows.DependencyObject)">
+      <summary>
+        Осуществляет поиск корневого элемента визуального дерева WPF для указанного объекта.
+      </summary>
+      <param name="reference">Элемент, для которого осуществляется поиск корневого элемента визуального дерева WPF.</param>
+      <returns>Корневой элемент визуального дерева WPF или null, если указанный объект является корневым элементом.</returns>
+    </method>
+  </members>
+</doc>

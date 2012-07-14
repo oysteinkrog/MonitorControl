@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.CommandButtons">
+      <summary>
+        Представляет класс, управляющий настройками стилей кнопок управления.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.CommandButtons.Mask">
+      <summary>
+        Возвращает или задаёт кисть, используемую для заливки содержимого кнопок управления — классов, наследующихся от класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/>.
+      </summary>
+      <value>Кисть, используемая для заливки содержимого кнопок управления. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.CommandButtons.MaskProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender"/>
+            </description>
+          </item>
+        </list>
+        Это свойство устанавливается локально в стиле элемента управления и обычно имеет значение, сопадающее со значением ресурса MiddleLightBrush.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new CommandButton();
+          var currentValue = Parameters.CommandButtons.GetMask(control);
+          Parameters.CommandButtons.SetMask(control, Brushes.Black);
+        </code>
+        <code lang="XAML">
+          &lt;CommandButton params:CommandButtons.Mask="Black"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.CommandButtons.MaskProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.CommandButtons.Mask"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.CommandButtons.Mask"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.CommandButtons.GetMask(Elysium.Controls.Primitives.CommandButtonBase)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.CommandButtons.Mask"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Кисть, используемая для заливки содержимого кнопок управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Parameters.CommandButtons.SetMask(Elysium.Controls.Primitives.CommandButtonBase,System.Windows.Media.SolidColorBrush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.CommandButtons.Mask"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Кисть, используемая для заливки содержимого кнопок управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Converters.ThicknessConverter">
+      <summary>
+        Обнуляет значения указанных краёв рамки.
+      </summary>
+    </type>
+    <method name="M:Elysium.Converters.ThicknessConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Обнуляет значения указанных краёв рамки.
+      </summary>
+      <param name="value">
+        Исходное значение типа <see cref="T:System.Windows.Thickness"/>.
+      </param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">Параметр конвертера. Должен быть строкой и принимать одно из следующих значений: "Left", "Top", "Right", "Bottom". Это значение соответствует краям рамки, которые должны быть сохранены.</param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        Значение типа <see cref="T:System.Windows.Thickness"/>, идентичное значению <paramref name="value"/>, за исключением обнулённых краёв.
+        В случае неудачного выполнения метода возвращается значение <see cref="F:System.Windows.DependencyProperty.UnsetValue">DependencyProperty.UnsetValue</see>.
+      </returns>
+    </method>
+  </members>
+</doc>

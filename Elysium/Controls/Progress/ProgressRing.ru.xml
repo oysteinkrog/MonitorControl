@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ProgressRing">
+      <summary>
+        Кольцевой индикатор выполнения.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.ProgressRing.Angle">
+      <summary>
+        Возвращает или задаёт значение угла (так, как если бы индикатор выполнения являлся бы единичной окружностью) для дочерних элементов индикатора.
+      </summary>
+      <value>
+        Значение угла (так, как если бы индикатор выполнения являлся бы единичной окружностью) для дочерних элементов индикатора
+        или -1d, если дочерний элемент расположен вне окружности. Значение по умолчанию — -1d.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ProgressRing.AngleProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Ellipse();
+          var currentValue = ProgressRing.GetAngle(control);
+          ProgressRing.SetAngle(control, 180d);
+        </code>
+        <code lang="XAML">
+          &lt;Ellipse metro:ProgressRing.Angle="180"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.ProgressRing.AngleProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ProgressRing.Angle"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ProgressRing.Angle"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ProgressRing.GetAngle(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.ProgressRing.Angle"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Значение угла для дочернего элемента индикатора выполнения.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.ProgressRing.SetAngle(System.Windows.UIElement,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.ProgressRing.Angle"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Значение угла для дочернего элемента индикатора выполнения.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.ProgressRing.MeasureOverride(System.Windows.Size)">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ProgressRing.ArrangeOverride(System.Windows.Size)">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ProgressRing.OnAnimationsUpdating(System.Windows.RoutedEventArgs)">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

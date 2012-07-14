@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ProgressBar">
+      <summary>
+        Линейный индикатор выполнения.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.ProgressBar.Orientation">
+      <summary>
+        Возвращает или задаёт значение, указывающее ориентацию линейного индикатора выполнения в пространстве.
+      </summary>
+      <value>
+        Одно из значений перечисления <see cref="T:System.Windows.Controls.Orientation"/>. Значение по умолчанию — <see cref="F:System.Windows.Controls.Orientation.Horizontal">Orientation.Horizontal</see>.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ProgressBar.OrientationProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ProgressBar.OrientationProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ProgressBar.Orientation"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ProgressBar.Orientation"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ProgressBar.OnOrientationChanged(System.Windows.Controls.Orientation,System.Windows.Controls.Orientation)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ProgressBar.Orientation"/>.
+      </summary>
+      <param name="oldOrientation">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ProgressBar.Orientation"/>.
+      </param>
+      <param name="newOrientation">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ProgressBar.Orientation"/>.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.ProgressBar.OnAnimationsUpdating(System.Windows.RoutedEventArgs)">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

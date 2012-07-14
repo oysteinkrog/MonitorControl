@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Theme">
+      <summary>
+        Определяет тип темы.
+      </summary>
+    </type>
+    <field name="F:Elysium.Theme.Dark">
+      <summary>
+        Элементы управления используют тёмную цветовую гамму по умолчанию.
+      </summary>
+    </field>
+    <field name="F:Elysium.Theme.Light">
+      <summary>
+        Элементы управления используют светлую цветовую гамму по умолчанию.
+      </summary>
+    </field>
+  </members>
+</doc>

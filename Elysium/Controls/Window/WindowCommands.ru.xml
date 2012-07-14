@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.WindowCommands">
+      <summary>
+        Предоставляет несколько базовых команд для управления окном типа <see cref="T:Elysium.Controls.Window"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.WindowCommands.Minimize">
+      <summary>
+        Возвращает значение, содержащее команду сворачивания окна.
+      </summary>
+      <value>Команда сворачивания окна.</value>
+    </property>
+    <property name="P:Elysium.Controls.WindowCommands.Maximize">
+      <summary>
+        Возвращает значение, содержащее команду разворачивания окна на весь экран.
+      </summary>
+      <value>Команда разворачивания окна на весь экран.</value>
+    </property>
+    <property name="P:Elysium.Controls.WindowCommands.Restore">
+      <summary>
+        Возвращает значение, содержащее команду возвращения окна в обычное состояние.
+      </summary>
+      <value>Команда возвращения окна в обычное состояние.</value>
+    </property>
+    <property name="P:Elysium.Controls.WindowCommands.Close">
+      <summary>
+        Возвращает значение, содержащее команду закрытия окна.
+      </summary>
+      <value>Команда закрытия окна.</value>
+    </property>
+  </members>
+</doc>

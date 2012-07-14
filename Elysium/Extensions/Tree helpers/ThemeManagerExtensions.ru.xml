@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Extensions.ThemeManagerExtensions">
+      <summary>
+        Предоставляет методы расширения для работы с настройками темы.
+      </summary>
+    </type>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetTheme(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает актуальный для элемента управления тип темы.
+      </summary>
+      <param name="reference">Элемент управления, для которого требуется узнать текущий тип темы.</param>
+      <returns>Тип темы для указанного элемента управления.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetTheme(System.Windows.Application)">
+      <summary>
+        Возвращает актуальный для приложения тип темы.
+      </summary>
+      <param name="reference">Экземпляр приложения, для которого требуется узнать текущий тип темы.</param>
+      <returns>Тип темы для указанного приложения.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetAccentBrush(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает значение акцентирующего цвета для указанного элемента управления.
+      </summary>
+      <param name="reference">Элемент управления, для которого требуется узнать акцентирующий цвет.</param>
+      <returns>Акцентирующий цвет для указанного элемента управления.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetAccentBrush(System.Windows.Application)">
+      <summary>
+        Возвращает значение акцентирующего цвета для указанного приложения.
+      </summary>
+      <param name="reference">Экземпляр приложения, для которого требуется узнать акцентирующий цвет.</param>
+      <returns>Акцентирующий цвет для указанного приложения.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetContrastBrush(System.Windows.FrameworkElement)">
+      <summary>
+        Возвращает значение контрастного (к акцентирующему) цвета для указанного элемента управления.
+      </summary>
+      <param name="reference">Элемент управления, для которого требуется узнать контрастный (к акцентирующему) цвет.</param>
+      <returns>Контрастный (к акцентирующему) цвет для указанного элемента управления.</returns>
+    </method>
+    <method name="M:Elysium.Extensions.ThemeManagerExtensions.GetContrastBrush(System.Windows.Application)">
+      <summary>
+        Возвращает значение контрастного (к акцентирующему) цвета для указанного приложения.
+      </summary>
+      <param name="reference">Экземпляр приложения, для которого требуется узнать контрастный (к акцентирующему) цвет.</param>
+      <returns>Контрастный (к акцентирующему) цвет для указанного приложения.</returns>
+    </method>
+  </members>
+</doc>

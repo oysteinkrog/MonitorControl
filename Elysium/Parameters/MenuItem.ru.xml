@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.MenuItem">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.MenuItem.BulletSize">
+      <summary>
+        Возвращает или задаёт размер маркера у класса <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </summary>
+      <value>Размер маркера. Значение по умолчанию — 12px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuItem.BulletSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+        Это свойство имеет действие на элемент управления MenuItem, вложенный в выпадающее меню любого типа (будь то ContextMenu или Submenu) и не являющийся родительским элементом другого выпадающего меню.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new MenuItem();
+          var currentValue = Parameters.MenuItem.GetBulletSize(control);
+          Parameters.MenuItem.SetBulletSize(control, 12d);
+        </code>
+        <code lang="XAML">
+          &lt;MenuItem params:MenuItem.BulletSize="12px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuItem.BulletSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuItem.BulletSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.BulletSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuItem.GetBulletSize(System.Windows.Controls.MenuItem)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.BulletSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Размер маркера.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.MenuItem.SetBulletSize(System.Windows.Controls.MenuItem,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.BulletSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Размер маркера.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.MenuItem.ArrowSize">
+      <summary>
+        Возвращает или задаёт размер указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </summary>
+      <value>
+        Размер указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>. Значение по умолчанию — 8px.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuItem.ArrowSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new MenuItem();
+          var currentValue = Parameters.MenuItem.GetArrowSize(control);
+          Parameters.MenuItem.SetArrowSize(control, 8d);
+        </code>
+        <code lang="XAML">
+          &lt;MenuItem params:MenuItem.ArrowSize="8px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuItem.ArrowSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuItem.GetArrowSize(System.Windows.Controls.MenuItem)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>
+        Размер указателя на возможность открытия в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.MenuItem.SetArrowSize(System.Windows.Controls.MenuItem,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">
+        Размер указателя на возможность открытия в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.MenuItem.ArrowMargin">
+      <summary>
+        Возвращает или задаёт размер отступа указателя на возможность открытия (стрелки) от краёв элемента управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </summary>
+      <value>
+        Размер отступ указателя на возможность открытия (стрелки) от краёв элемента управления <see cref="T:System.Windows.Controls.MenuItem"/>. Значение по умолчанию — (3, 0, 3, 0).
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuItem.ArrowMarginProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new MenuItem();
+          var currentValue = Parameters.MenuItem.GetArrowMargin(control);
+          Parameters.MenuItem.SetArrowMargin(control, new Thickness(3d, 0d, 3d, 0d));
+        </code>
+        <code lang="XAML">
+          &lt;MenuItem params:MenuItem.ArrowMargin="3,0,3,0"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuItem.ArrowMarginProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowMargin"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowMargin"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuItem.GetArrowMargin(System.Windows.Controls.MenuItem)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowMargin"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>
+        Отступ указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.MenuItem.SetArrowMargin(System.Windows.Controls.MenuItem,System.Windows.Thickness)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuItem.ArrowMargin"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">
+        Размер отступа указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.MenuItem"/>.
+      </param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ApplicationBar">
+      <summary>
+        Панель управления приложением.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.ApplicationBar.Dock">
+      <summary>
+        Возвращает или задаёт алгоритм размещения элемента управления внутри панели управления приложением.
+      </summary>
+      <value>Одно из значений перечисления <see cref="T:Elysium.Controls.ApplicationBarDock"/>. Значение по умолчанию — <see cref="F:Elysium.Controls.ApplicationBarDock.Left"/>ApplicationBarDock.Left</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.DockProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new CommandButton();
+          var currentValue = ApplicationBar.GetDock(control);
+          ApplicationBar.SetDock(control, ApplicationBarDock.Left);
+        </code>
+        <code lang="XAML">
+          &lt;CommandButton metro:ApplicationBar.Dock="Left"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.ApplicationBar.DockProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ApplicationBar.Dock"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.Dock"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.GetDock(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.Dock"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Алгоритм размещения элемента управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.SetDock(System.Windows.UIElement,Elysium.Controls.ApplicationBarDock)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.Dock"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Алгоритм размещения элемента управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Controls.ApplicationBar.IsOpen">
+      <summary>
+        Возвращает или задаёт значение, указывающее, открыта ли в данный момент панель управления приложением. По умолчанию, панель управления приложением открывается правой кнопкой мыши.
+      </summary>
+      <value>True, если панель управления приложением открыто; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.IsOpenProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ApplicationBar.IsOpenProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ApplicationBar.IsOpen"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.IsOpen"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnIsOpenChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.IsOpen"/>.
+      </summary>
+      <param name="oldIsOpen">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.IsOpen"/>.
+      </param>
+      <param name="newIsOpen">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.IsOpen"/>.
+      </param>
+    </method>
+    <event name="E:Elysium.Controls.ApplicationBar.Opening">
+      <summary>
+        Событие генерируется перед открытием панели управления приложением.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.OpeningEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ApplicationBar.OnOpening(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Нисходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ApplicationBar.OpeningEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ApplicationBar.Opening"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Opening"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnOpening(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Opening"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ApplicationBar.Closing">
+      <summary>
+        Событие генерируется перед закрытием панели управления приложением.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.ClosingEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ApplicationBar.OnClosing(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Нисходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ApplicationBar.ClosingEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ApplicationBar.Closing"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Closing"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnClosing(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Closing"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ApplicationBar.Opened">
+      <summary>
+        Событие генерируется после открытия панели управления приложением.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.OpenedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ApplicationBar.OnOpened(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ApplicationBar.OpenedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ApplicationBar.Opened"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Opened"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnOpened(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Opened"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ApplicationBar.Closed">
+      <summary>
+        Событие генерируется после закрытия панели управления приложением.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.ClosedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ApplicationBar.OnClosed(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ApplicationBar.ClosedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ApplicationBar.Closed"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Closed"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnClosed(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ApplicationBar.Closed"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <property name="P:Elysium.Controls.ApplicationBar.StaysOpen">
+      <summary>
+        Возвращает или задаёт значение, указывающее, закрывается ли панель управления приложением при потере фокуса.
+      </summary>
+      <value>
+        True, если панель управления приложением закрывается, когда пользователь повторно нажимает на правую кнопку мыши;
+        False, если панель управления приложением закрывается при возникновении события мыши или клавиатуры вне панели управления приложением.
+        Значение по умолчанию — True.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.StaysOpenProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ApplicationBar.StaysOpenProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ApplicationBar.StaysOpen"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.StaysOpen"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnStaysOpenChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.StaysOpen"/>.
+      </summary>
+      <param name="oldStaysOpen">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.StaysOpen"/>.
+      </param>
+      <param name="newStaysOpen">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.StaysOpen"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ApplicationBar.PreventsOpen">
+      <summary>
+        Возвращает или задаёт значение, указывающее на возможность открытия панели управления приложением при щелчке правой кнопкой над указанным элементов управления.
+      </summary>
+      <value>True, если панель управления приложением может вызываться правым щелчком на указанном элементе управления; иначе False. Значение по умолчанию — True.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.PreventsOpenProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Grid();
+          var currentValue = ApplicationBar.GetPreventsOpen(control);
+          ApplicationBar.SetPreventsOpen(control, true);
+        </code>
+        <code lang="XAML">
+          &lt;Grid metro:ApplicationBar.PreventsOpen="True"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.ApplicationBar.PreventsOpenProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ApplicationBar.PreventsOpen"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.PreventsOpen"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.GetPreventsOpen(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.PreventsOpen"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Алгоритм размещения элемента управления.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.SetPreventsOpen(System.Windows.UIElement,System.Boolean)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.PreventsOpen"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Алгоритм размещения элемента управления.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Controls.ApplicationBar.TransitionMode">
+      <summary>
+        Возвращает или задаёт значение, указывающее, какая анимация используется при открытии и закрытии панели управления приложением.
+      </summary>
+      <value>Одно из значений перечисления <see cref="T:Elysium.Controls.ApplicationBarTransitionMode"/>. Значение по умолчанию — <see cref="F:Elysium.Controls.ApplicationBarTransitionMode.Slide">ApplicationBarTransitionMode.Slide</see>.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ApplicationBar.TransitionModeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ApplicationBar.TransitionModeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ApplicationBar.TransitionMode"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.TransitionMode"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ApplicationBar.OnTransitionModeChanged(Elysium.Controls.ApplicationBarTransitionMode,Elysium.Controls.ApplicationBarTransitionMode)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.TransitionMode"/>.
+      </summary>
+      <param name="oldTransitionMode">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.TransitionMode"/>.
+      </param>
+      <param name="newTransitionMode">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ApplicationBar.TransitionMode"/>.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.IsItemItsOwnContainerOverride(System.Object)">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.GetContainerForItemOverride">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.OnCreateAutomationPeer">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ApplicationBar.ArrangeOverride(System.Windows.Size)">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

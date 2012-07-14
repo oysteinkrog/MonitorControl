@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.TabItem">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.TabItem"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.TabItem.HeaderStyle">
+      <summary>
+        Возвращает или задаёт стиль заголовка вкладки в элементе управления <see cref="T:System.Windows.Controls.TabItem"/>.
+      </summary>
+      <value>Стиль заголовка вкладки. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.TabItem.HeaderStyleProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+            </description>
+          </item>
+        </list>
+        Это свойство обычно устанавливается локально в стиле элемента управления.
+      </remarks>
+    </property>
+    <field name="F:Elysium.Parameters.TabItem.HeaderStyleProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.TabItem.HeaderStyle"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.TabItem.HeaderStyle"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.TabItem.GetHeaderStyle(System.Windows.Controls.TabItem)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.TabItem.HeaderStyle"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Стиль заголовка вкладки.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Parameters.TabItem.SetHeaderStyle(System.Windows.Controls.TabItem,System.Windows.Style)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.TabItem.HeaderStyle"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Стиль заголовка вкладки.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

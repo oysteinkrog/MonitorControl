@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.ComboBox">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.ComboBox.ButtonSize">
+      <summary>
+        Возвращает или задаёт ширину кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </summary>
+      <value>
+        Ширина кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>. Значение по умолчанию — 18px.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ComboBox.ButtonSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+        Значение этого свойства используется только если элемент управления <see cref="T:System.Windows.Controls.ComboBox"/> объявлен как редактируемый.
+        В противном случае, значение игнорируется, а кнопка растягивается на всю ширину элемента управления.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ComboBox();
+          var currentValue = Parameters.ComboBox.GetButtonSize(control);
+          Parameters.ComboBox.SetButtonSize(control, 18d);
+        </code>
+        <code lang="XAML">
+          &lt;ComboBox params:ComboBox.ButtonSize="18px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ComboBox.ButtonSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ComboBox.ButtonSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ButtonSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ComboBox.GetButtonSize(System.Windows.Controls.ComboBox)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ButtonSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>
+        Ширина кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ComboBox.SetButtonSize(System.Windows.Controls.ComboBox,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ButtonSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">
+        Ширина кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.ComboBox.ArrowSize">
+      <summary>
+        Возвращает или задаёт размер указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </summary>
+      <value>
+        Размер указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>. Значение по умолчанию — 8px.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ComboBox.ArrowSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ComboBox();
+          var currentValue = Parameters.ComboBox.GetArrowSize(control);
+          Parameters.ComboBox.SetArrowSize(control, 8d);
+        </code>
+        <code lang="XAML">
+          &lt;ComboBox params:ComboBox.ArrowSize="8px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ComboBox.ArrowSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ComboBox.GetArrowSize(System.Windows.Controls.ComboBox)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>
+        Размер указателя на возможность открытия в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ComboBox.SetArrowSize(System.Windows.Controls.ComboBox,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">
+        Размер указателя на возможность открытия в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.ComboBox.ArrowMargin">
+      <summary>
+        Возвращает или задаёт отступ указателя на возможность открытия (стрелки) от краёв кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </summary>
+      <value>
+        Отступ указателя на возможность открытия (стрелки) от краёв кнопки в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>. Значение по умолчанию — (5, 0, 5, 0).
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ComboBox.ArrowMarginProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+        В стиле по умолчанию используется значение только правого отступа, остальные значения игнорируются.
+        Тем не менее, при переопределении стиля вы можете использовать и значения других отступов.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ComboBox();
+          var currentValue = Parameters.ComboBox.GetArrowMargin(control);
+          Parameters.ComboBox.SetArrowMargin(control, new Thickness(5d, 0d, 5d, 0d));
+        </code>
+        <code lang="XAML">
+          &lt;ComboBox params:ComboBox.ArrowMargin="5,0,5,0"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ComboBox.ArrowMarginProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowMargin"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowMargin"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ComboBox.GetArrowMargin(System.Windows.Controls.ComboBox)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowMargin"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>
+        Отступ указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ComboBox.SetArrowMargin(System.Windows.Controls.ComboBox,System.Windows.Thickness)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ComboBox.ArrowMargin"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">
+        Отступ указателя на возможность открытия (стрелки) в элементе управления <see cref="T:System.Windows.Controls.ComboBox"/>.
+      </param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

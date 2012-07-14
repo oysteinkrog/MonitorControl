@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.TabControl">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.TabControl"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.TabControl.IndicatorBrush">
+      <summary>
+        Возвращает или задаёт кисть, используемую для заливки индикатора текущей вкладки элемента управления <see cref="T:System.Windows.Controls.TabControl"/>.
+      </summary>
+      <value>Кисть, используемая для заливки индикатора текущей вкладки. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.TabControl.IndicatorBrushProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender"/>
+            </description>
+          </item>
+        </list>
+        Это свойство устанавливается локально в стиле элемента управления и обычно имеет значение, сопадающее со значением ресурса AccentBrush для активной вкладки и HighlightBrush для остальной части индикатора.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new TabControl();
+          var currentValue = Parameters.TabControl.GetIndicatorBrush(control);
+          Parameters.TabControl.SetIndicatorBrush(control, Brushes.LightGray);
+        </code>
+        <code lang="XAML">
+          &lt;CommandButton params:TabControl.IndicatorBrush="LightGray"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.TabControl.IndicatorBrushProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorBrush"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorBrush"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.TabControl.GetIndicatorBrush(System.Windows.DependencyObject)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Кисть, используемая для заливки индикатора текущей вкладки.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="obj"/> не принадлежит к одному из следующих типов: <see cref="T:System.Windows.Controls.TabControl"/>, <see cref="T:System.Windows.Controls.TabItem"/>.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <requires exception="T:System.ArgumentException">(obj is TabControl) || (obj is TabItem)</requires>
+    </method>
+    <method name="M:Elysium.Parameters.TabControl.SetIndicatorBrush(System.Windows.DependencyObject,System.Windows.Media.SolidColorBrush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Кисть, используемая для заливки индикатора текущей вкладки.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="obj"/> не принадлежит к одному из следующих типов: <see cref="T:System.Windows.Controls.TabControl"/>, <see cref="T:System.Windows.Controls.TabItem"/>.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <requires exception="T:System.ArgumentException">(obj is TabControl) || (obj is TabItem)</requires>
+    </method>
+    <property name="P:Elysium.Parameters.TabControl.IndicatorThickness">
+      <summary>
+        Возвращает или задаёт толщину индикатора текущей вкладки в элементе управления <see cref="T:System.Windows.Controls.TabControl"/>.
+      </summary>
+      <value>Толщина индикатора текущей вкладки. Значение по умолчанию — 2px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.TabControl.IndicatorThicknessProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new TabControl();
+          var currentValue = Parameters.TabControl.GetIndicatorThickness(control);
+          Parameters.TabControl.SetIndicatorThickness(control, 2d);
+        </code>
+        <code lang="XAML">
+          &lt;Slider params:TabControl.IndicatorThickness="2px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.TabControl.IndicatorThicknessProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorThickness"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorThickness"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.TabControl.GetIndicatorThickness(System.Windows.Controls.TabControl)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Толщина индикатора текущей вкладки.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.TabControl.SetIndicatorThickness(System.Windows.Controls.TabControl,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.TabControl.IndicatorThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Толщина индикатора текущей вкладки.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Primitives.CommandButtonBase">
+      <summary>
+        Базовый класс для кнопок управления (command buttons).
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.Primitives.CommandButtonBase.Header">
+      <summary>
+        Возвращает или задаёт данные, используемые для заголовка элемента управления.
+      </summary>
+      <value>Объект заголовка. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.Header"/>
+    </property>
+    <field name="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnHeaderChanged(System.Object,System.Object)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/>.
+      </summary>
+      <param name="oldHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/>.
+      </param>
+      <param name="newHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader">
+      <summary>
+        Возвращает значение, указывающее имеет ли заголовок значение null в данный момент.
+      </summary>
+      <value>
+        True, если значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.Header"/> не равно null, в противном случае False. Значение по умолчанию — False.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Primitives.CommandButtonBase.HasHeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HasHeader"/>
+    </property>
+    <field name="F:Elysium.Controls.Primitives.CommandButtonBase.HasHeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnHasHeaderChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader"/>.
+      </summary>
+      <param name="oldHasHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader"/>.
+      </param>
+      <param name="newHasHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HasHeader"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat">
+      <summary>
+        Возвращает или задаёт составную строку, которая определяет форматирование заголовка, если он отображается как строка.
+      </summary>
+      <value>Составная строка, которая определяет форматирование заголовка, если он отображается как строка. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormatProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat"/>
+    </property>
+    <field name="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormatProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnHeaderStringFormatChanged(System.String,System.String)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat"/>.
+      </summary>
+      <param name="oldHeaderStringFormat">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat"/>.
+      </param>
+      <param name="newHeaderStringFormat">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderStringFormat"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate">
+      <summary>
+        Возвращает или задаёт шаблон, используемый для отображения содержимого заголовка элемента управления.
+      </summary>
+      <value>Шаблон, используемый для отображения содержимого заголовка элемента управления. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate"/>
+    </property>
+    <field name="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnHeaderTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate"/>.
+      </summary>
+      <param name="oldHeaderTemplate">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate"/>.
+      </param>
+      <param name="newHeaderTemplate">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplate"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector">
+      <summary>
+        Возвращает или задаёт селектор шаблона данных, предоставляющий пользовательскую логику для выбора шаблона отображения содержимого заголовка элемента управления.
+      </summary>
+      <value>Экземпляр селектора шаблона данных. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelectorProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector"/>
+    </property>
+    <field name="F:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelectorProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnHeaderTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector"/>.
+      </summary>
+      <param name="oldHeaderTemplateSelector">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector"/>.
+      </param>
+      <param name="newHeaderTemplateSelector">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Primitives.CommandButtonBase.HeaderTemplateSelector"/>.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.MeasureOverride(System.Windows.Size)">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.ArrangeOverride(System.Windows.Size)">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.Primitives.CommandButtonBase.OnApplyTemplate">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

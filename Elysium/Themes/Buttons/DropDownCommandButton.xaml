@@ -1,0 +1,205 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:params="clr-namespace:Elysium.Parameters"
+                    xmlns:primitives="clr-namespace:Elysium.Controls.Primitives"
+                    xmlns:controls="clr-namespace:Elysium.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Elysium;component/Themes/SharedResources.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/CommandButtonBase.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Menus/Submenu.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DropDownCommandButtonSubmenuStyle" TargetType="{x:Type controls:Submenu}" BasedOn="{StaticResource {x:Type controls:Submenu}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:Submenu}">
+                    <Border x:Name="LayoutRoot"
+                            Tag="{DynamicResource {x:Static SystemParameters.DropShadowKey}}">
+                        <ScrollViewer Background="{TemplateBinding Background}"
+                                      BorderBrush="{TemplateBinding BorderBrush}"
+                                      BorderThickness="{TemplateBinding BorderThickness}"
+                                      TextBlock.Foreground="{TemplateBinding Foreground}"
+                                      TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                                      TextBlock.FontSize="{TemplateBinding FontSize}"
+                                      TextBlock.FontStretch="{TemplateBinding FontStretch}"
+                                      TextBlock.FontStyle="{TemplateBinding FontStyle}"
+                                      TextBlock.FontWeight="{TemplateBinding FontWeight}"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <ScrollViewer.Resources>
+                                <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource {x:Type ScrollBar}}">
+                                    <Style.Triggers>
+                                        <Trigger Property="Orientation" Value="Vertical">
+                                            <Setter Property="BorderThickness" Value="0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ScrollViewer.Resources>
+                            <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Cycle"/>
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=LayoutRoot, Path=Tag}" Value="True">
+                            <Setter TargetName="LayoutRoot" Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(params:General.ShadowBrush).(SolidColorBrush.Color)}"
+                                                      BlurRadius="4" ShadowDepth="0"
+                                                      Direction="90"
+                                                      Opacity="0.7"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="LayoutRoot" Property="Background" Value="{DynamicResource Transparent}"/>
+                            <Setter TargetName="LayoutRoot" Property="Padding" Value="4"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="{x:Type controls:DropDownCommandButton}" TargetType="{x:Type controls:DropDownCommandButton}" BasedOn="{StaticResource {x:Type primitives:CommandButtonBase}}">
+        <Style.Resources>
+            <Style TargetType="{x:Type controls:Submenu}" BasedOn="{StaticResource DropDownCommandButtonSubmenuStyle}"/>
+        </Style.Resources>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:DropDownCommandButton}">
+                    <Grid Background="{DynamicResource TransparentBrush}"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Ellipse x:Name="PART_Decor"
+                                 Grid.Row="0"
+                                 Fill="{TemplateBinding Background}"
+                                 Stroke="{TemplateBinding BorderBrush}"
+                                 StrokeThickness="{Binding BorderThickness, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ThicknessToDoubleConverter}}"
+                                 Stretch="Fill"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"/>
+                        <ContentPresenter x:Name="PART_ContentHost"
+                                          Grid.Row="0"
+                                          Content="{TemplateBinding Content}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          Margin="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                        <ContentPresenter x:Name="PART_HeaderHost"
+                                          Grid.Row="1"
+                                          Content="{TemplateBinding Header}"
+                                          ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="Center"/>
+                        <Popup x:Name="PART_Popup"
+                               Grid.Row="1"
+                               AllowsTransparency="True"
+                               IsOpen="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsDropDownOpen, Mode=TwoWay}"
+                               StaysOpen="False"
+                               Placement="Custom"
+                               VerticalOffset="{TemplateBinding params:General.BoldPaddingValue}"
+                               MaxHeight="{TemplateBinding MaxDropDownHeight}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Header" Value="{x:Null}">
+                            <Setter TargetName="PART_HeaderHost" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsDropDownOpen" Value="True">
+                <Setter Property="BorderBrush" Value="{DynamicResource MiddleLightBrush}"/>
+                <Setter Property="params:CommandButtons.Mask" Value="{DynamicResource MiddleLightBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DropDownCommandButtonApplicationBarStyle" TargetType="{x:Type controls:DropDownCommandButton}" BasedOn="{StaticResource CommandButtonBaseApplicationBarStyle}">        
+        <Style.Resources>
+            <Style TargetType="{x:Type controls:Submenu}" BasedOn="{StaticResource DropDownCommandButtonSubmenuStyle}"/>
+        </Style.Resources>        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:DropDownCommandButton}">
+                    <Grid Background="{DynamicResource TransparentBrush}"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Ellipse x:Name="PART_Decor"
+                                 Grid.Row="0"
+                                 Fill="{TemplateBinding Background}"
+                                 Stroke="{TemplateBinding BorderBrush}"
+                                 StrokeThickness="{Binding BorderThickness, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ThicknessToDoubleConverter}}"
+                                 Stretch="Fill"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"/>
+                        <Ellipse Grid.Row="0"
+                                 Fill="{TemplateBinding params:CommandButtons.Mask}"
+                                 Stroke="{DynamicResource TransparentBrush}"
+                                 StrokeThickness="{Binding BorderThickness, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ThicknessToDoubleConverter}}"
+                                 Stretch="Fill"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Width="{Binding ElementName=PART_Decor, Path=ActualWidth, Mode=OneWay}"
+                                 Height="{Binding ElementName=PART_Decor, Path=ActualHeight, Mode=OneWay}">
+                            <Ellipse.OpacityMask>
+                                <VisualBrush AutoLayoutContent="True"
+                                             AlignmentX="Center"
+                                             AlignmentY="Center"
+                                             Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <ContentPresenter x:Name="PART_ContentHost"
+                                                          Content="{TemplateBinding Content}"
+                                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                                          Margin="{TemplateBinding Padding}"
+                                                          RecognizesAccessKey="True"/>
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Ellipse.OpacityMask>
+                        </Ellipse>
+                        <ContentPresenter x:Name="PART_HeaderHost"
+                                          Grid.Row="1"
+                                          Content="{TemplateBinding Header}"
+                                          ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="Center"/>
+                        <Popup x:Name="PART_Popup"
+                               Grid.Row="1"
+                               AllowsTransparency="True"
+                               IsOpen="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsDropDownOpen, Mode=TwoWay}"
+                               StaysOpen="False"
+                               Placement="Custom"
+                               VerticalOffset="{TemplateBinding params:General.BoldPaddingValue}"
+                               MaxHeight="{TemplateBinding MaxDropDownHeight}"/>
+                    </Grid>                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Header" Value="{x:Null}">
+                            <Setter TargetName="PART_HeaderHost" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsDropDownOpen" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ContrastBrush}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ContrastBrush}"/>
+                <Setter Property="params:CommandButtons.Mask" Value="{DynamicResource AccentBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

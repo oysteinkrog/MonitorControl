@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Windows;
-using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using Elysium;
-using Elysium.Notifications;
-using Elysium.Parameters;
 using MonitorControl.Model;
 using MonitorControl.ViewModels;
-using Brushes = System.Drawing.Brushes;
 
 namespace MonitorControl
 {

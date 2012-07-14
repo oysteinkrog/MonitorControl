@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ToggleCommandButton">
+      <summary>
+        Кнопка управления, поддерживающая состояния "включено", "выключено" и "неопределено".
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.ToggleCommandButton.IsChecked">
+      <summary>
+        Возвращает или задаёт значение, указывающее, находится ли кнопка управления во включенном состоянии.
+      </summary>
+      <value>True, если кнопка управления находится во включенном состоянии; False — если в выключенном; иначе null. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleCommandButton.IsCheckedProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ToggleCommandButton.IsCheckedProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsChecked"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsChecked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnIsCheckedChanged(System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsChecked"/>.
+      </summary>
+      <param name="oldIsChecked">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsChecked"/>.
+      </param>
+      <param name="newIsChecked">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsChecked"/>.
+      </param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleCommandButton.Checked">
+      <summary>
+        Событие генерируется при переходе в состояние "включено".
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleCommandButton.CheckedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleCommandButton.OnChecked(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleCommandButton.CheckedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleCommandButton.Checked"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Checked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnChecked(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Checked"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleCommandButton.Unchecked">
+      <summary>
+        Событие генерируется при переходе в состояние "выключено".
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleCommandButton.UncheckedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleCommandButton.OnUnchecked(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleCommandButton.UncheckedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleCommandButton.Unchecked"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Unchecked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnUnchecked(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Unchecked"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleCommandButton.Indeterminate">
+      <summary>
+        Событие генерируется при переходе в состояние "неопределено".
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleCommandButton.IndeterminateEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleCommandButton.OnIndeterminate(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleCommandButton.IndeterminateEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleCommandButton.Indeterminate"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Indeterminate"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnIndeterminate(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleCommandButton.Indeterminate"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleCommandButton.IsThreeState">
+      <summary>
+        Возвращает или задаёт значение, указывающее, два или три состояния поддерживает элемент управления.
+      </summary>
+      <value>True, если кнопка управления поддерживает три состояния; в противном случае False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleCommandButton.IsThreeStateProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ToggleCommandButton.IsThreeStateProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsThreeState"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsThreeState"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnIsThreeStateChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsThreeState"/>.
+      </summary>
+      <param name="oldIsThreeState">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsThreeState"/>.
+      </param>
+      <param name="newIsThreeState">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleCommandButton.IsThreeState"/>.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnCreateAutomationPeer">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnClick">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ToggleCommandButton.OnToggle">
+      <inheritdoc cref="M:System.Windows.Controls.Primitives.ToggleButton.OnToggle"/>
+    </method>
+  </members>
+</doc>

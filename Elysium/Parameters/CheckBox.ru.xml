@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.CheckBox">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:System.Windows.Controls.CheckBox"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.CheckBox.CheckSize">
+      <summary>
+        Возвращает или задаёт размер маркера в состоянии "включен" для элемента управления <see cref="T:System.Windows.Controls.CheckBox"/>.
+      </summary>
+      <value>Размер маркера в состоянии "включен". Значение по умолчанию — 10px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.CheckBox.CheckSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new CheckBox();
+          var currentValue = Parameters.CheckBox.GetCheckSize(control);
+          Parameters.CheckBox.SetCheckSize(control, 10d);
+        </code>
+        <code lang="XAML">
+          &lt;CheckBox params:CheckBox.CheckSize="10px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.CheckBox.CheckSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.CheckBox.CheckSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.CheckBox.CheckSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.CheckBox.GetCheckSize(System.Windows.Controls.CheckBox)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.CheckBox.CheckSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Размер маркера в состоянии "включен".</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.CheckBox.SetCheckSize(System.Windows.Controls.CheckBox,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.CheckBox.CheckSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Размер маркера в состоянии "включен".</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

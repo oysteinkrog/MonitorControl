@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer">
+      <summary>
+        Является базовым классом для провайдеров наследников класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/> для технологии UI Automation.
+      </summary>
+      <invariant>Свойство Owner никогда не равно null.</invariant>
+    </type>
+    <method name="M:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer.#ctor(Elysium.Controls.Primitives.CommandButtonBase)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer.Owner">
+      <summary>
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/>, для которого используется провайдер.
+      </summary>
+      <getter>
+        <ensures>Значение не может равняться null.</ensures>
+      </getter>
+      <value>
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/>, для которого используется провайдер.
+      </value>
+    </property>
+    <method name="M:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer.GetAutomationControlTypeCore">
+      <summary>
+        Возвращает тип элемента управления для объекта-наследника класса <see cref="T:Elysium.Controls.Primitives.CommandButtonBase"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType"/>.
+      </summary>
+      <returns>
+        Значение <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Button">AutomationControlType.Button</see>.
+      </returns>
+      <ensures>Возвращаемое значение всегда является значением AutomationControlType.Button.</ensures>
+    </method>
+  </members>
+</doc>

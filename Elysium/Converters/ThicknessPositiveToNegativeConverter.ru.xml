@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Converters.ThicknessPositiveToNegativeConverter">
+      <summary>
+        Меняет знак значений указанных краёв рамки на противоположный.
+      </summary>
+    </type>
+    <method name="M:Elysium.Converters.ThicknessPositiveToNegativeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Меняет знак значений указанных краёв рамки на противоположный.
+      </summary>
+      <param name="value">
+        Исходное значение типа <see cref="T:System.Windows.Thickness"/>.
+      </param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">Параметр конвертера. Должен быть строкой и принимать одно из следующих значений: "Left", "Top", "Right", "Bottom". Это значение соответствует краю рамки, который используется в расчётах.</param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        Значение типа <see cref="T:System.Windows.Thickness"/>, в котором значение для каждого из краёв рамки равно соответствующему значению <paramref name="value"/> по модулю, но знак изменён на противоположный.
+        В случае неудачного выполнения метода возвращается значение <see cref="F:System.Windows.DependencyProperty.UnsetValue">DependencyProperty.UnsetValue</see>.
+      </returns>
+    </method>
+    <method name="M:Elysium.Converters.ThicknessPositiveToNegativeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Меняет знак значений указанных краёв рамки на противоположный.
+      </summary>
+      <param name="value">
+        Исходное значение типа <see cref="T:System.Windows.Thickness"/>.
+      </param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">Параметр конвертера. Должен быть строкой и принимать одно из следующих значений: "Left", "Top", "Right", "Bottom". Это значение соответствует краю рамки, который используется в расчётах.</param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        Значение типа <see cref="T:System.Windows.Thickness"/>, в котором значение для каждого из краёв рамки равно соответствующему значению <paramref name="value"/> по модулю, но знак изменён на противоположный.
+        В случае неудачного выполнения метода возвращается значение <see cref="F:System.Windows.DependencyProperty.UnsetValue">DependencyProperty.UnsetValue</see>.
+      </returns>
+    </method>
+  </members>
+</doc>

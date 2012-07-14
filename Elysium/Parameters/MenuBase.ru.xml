@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.MenuBase">
+      <summary>
+        Представляет класс, управляющий настройками стиля меню.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.MenuBase.SubmenuBackground">
+      <summary>
+        Возвращает или задаёт цвет фона выпадающего субменю.
+      </summary>
+      <value>Цвет фона выпадающего меню. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuBase.SubmenuBackgroundProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Menu();
+          var currentValue = Parameters.MenuBase.GetSubmenuBackground(control);
+          Parameters.MenuBase.SetSubmenuBackground(control, null);
+        </code>
+        <code lang="XAML">
+          &lt;Menu params:MenuBase.SubmenuBackground="{x:Null}"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuBase.SubmenuBackgroundProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBackground"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBackground"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuBase.GetSubmenuBackground(System.Windows.Controls.Primitives.MenuBase)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBackground"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Цвет фона выпадающего меню.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Parameters.MenuBase.SetSubmenuBackground(System.Windows.Controls.Primitives.MenuBase,System.Windows.Media.Brush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBackground"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Цвет фона выпадающего меню.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.MenuBase.SubmenuBorderBrush">
+      <summary>
+        Возвращает или задаёт цвет границы выпадающего субменю.
+      </summary>
+      <value>
+        Цвет границы выпадающего субменю. Значение по умолчанию — null.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuBase.SubmenuBorderBrushProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Menu();
+          var currentValue = Parameters.MenuBase.GetSubmenuBorderBrush(control);
+          Parameters.MenuBase.SetSubmenuBorderBrush(control, null);
+        </code>
+        <code lang="XAML">
+          &lt;Menu params:MenuBase.SubmenuBorderBrush="{x:Null}"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuBase.SubmenuBorderBrushProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderBrush"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderBrush"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuBase.GetSubmenuBorderBrush(System.Windows.Controls.Primitives.MenuBase)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Цвет границы выпадающего субменю.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Parameters.MenuBase.SetSubmenuBorderBrush(System.Windows.Controls.Primitives.MenuBase,System.Windows.Media.Brush)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderBrush"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Цвет границы выпадающего субменю.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.MenuBase.SubmenuBorderThickness">
+      <summary>
+        Возвращает или задаёт размер границы выпадающего субменю.
+      </summary>
+      <value>
+        Размер границы выпадающего субменю. Значение по умолчанию — (0, 0, 0, 0).
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.MenuBase.SubmenuBorderThicknessProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Menu();
+          var currentValue = Parameters.MenuBase.GetSubmenuBorderThickness(control);
+          Parameters.MenuBase.SetSubmenuBorderThickness(control, new Thickness(0d));
+        </code>
+        <code lang="XAML">
+          &lt;Menu params:MenuBase.SubmenuBorderThickness="0"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.MenuBase.SubmenuBorderThicknessProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderThickness"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderThickness"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.MenuBase.GetSubmenuBorderThickness(System.Windows.Controls.Primitives.MenuBase)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Размер границы выпадающего субменю.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.MenuBase.SetSubmenuBorderThickness(System.Windows.Controls.Primitives.MenuBase,System.Windows.Thickness)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.MenuBase.SubmenuBorderThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Размер границы выпадающего субменю.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

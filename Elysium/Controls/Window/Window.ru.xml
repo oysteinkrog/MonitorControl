@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Window">
+      <summary>
+        Базовый класс для окон в Metro стиле.
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.Window.IsMainWindow">
+      <summary>
+        Возвращает или задаёт значение, указывающее является ли указанное окно главным. В приложении может быть только одно главное окно.
+      </summary>
+      <value>True, если окно является главным, иначе False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.IsMainWindowProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      Это свойство применимо ко всем классам, наследующихся от класса <see cref="T:System.Windows.Window">System.Windows.Window</see>.
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Window();
+          var currentValue = Window.GetIsMainWindow(control);
+          Window.SetIsMainWindow(control, false);
+        </code>
+        <code lang="XAML">
+          &lt;Window metro:Window.IsMainWindow="False"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.Window.IsMainWindowProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.IsMainWindow"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.IsMainWindow"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.GetIsMainWindow(System.Windows.Window)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsMainWindow"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Значение, указывающее является ли указанное окно главным.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.Window.SetIsMainWindow(System.Windows.Window,System.Boolean)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsMainWindow"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Значение, указывающее является ли указанное окно главным.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Controls.Window.Progress">
+      <summary>
+        Возвращает или задаёт значение, указывающее процент выполнения задачи окном.
+      </summary>
+      <value>Значение, указывающее процент выполнения задачи окном. Значение по умолчанию — 0d.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.ProgressProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.Window.ProgressProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.Progress"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.Progress"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.OnProgressChanged(System.Double,System.Double)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Window.Progress"/>.
+      </summary>
+      <param name="oldProgress">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.Progress"/>.
+      </param>
+      <param name="newProgress">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.Progress"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Window.IsBusy">
+      <summary>
+        Возвращает или задаёт значение, указывающее, находится ли окно в данный момент в состоянии занятости.
+      </summary>
+      <value>True, если окно в данный момент находится в состоянии занятости; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.IsBusyProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.Window.IsBusyProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.IsBusy"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.IsBusy"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.OnIsBusyChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Window.IsBusy"/>.
+      </summary>
+      <param name="oldIsBusy">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsBusy"/>.
+      </param>
+      <param name="newIsBusy">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsBusy"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Window.HasDropShadow">
+      <summary>
+        Возвращает или задаёт значение, указывающее, имеет ли окно тень.
+      </summary>
+      <value>True, если окно имеет тень; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.HasDropShadowProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault"/>
+            </description>
+          </item>
+        </list>
+        По-умолчанию используется значение взятое из системных настроек (задаётся в стиле по-умолчанию).
+        При использовании Windows версии ниже Window Vista значение свойства всегда корректируется в значение False.
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.Window.HasDropShadowProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.HasDropShadow"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.HasDropShadow"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.OnHasDropShadowChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.Window.HasDropShadow"/>.
+      </summary>
+      <param name="oldHasDropShadow">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.HasDropShadow"/>.
+      </param>
+      <param name="newHasDropShadow">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.Window.HasDropShadow"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Window.ApplicationBar">
+      <summary>
+        Возвращает или задаёт панель управления приложением для данного окна.
+      </summary>
+      <value>Панель управления приложением. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.ApplicationBarProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Window();
+          var currentValue = Window.GetApplicationBar(control);
+          Window.SetApplicationBar(control, new ApplicationBar());
+        </code>
+        <code lang="XAML">
+          &lt;metro:Window.ApplicationBar&gt;
+            &lt;metro:ApplicationBar&gt;
+                ...
+            &lt;/metro:ApplicationBar&gt;
+          &lt;/metro:Window.ApplicationBar&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.Window.ApplicationBarProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.ApplicationBar"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.ApplicationBar"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.GetApplicationBar(System.Windows.Window)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.Window.ApplicationBar"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Панель управления приложением.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.Window.SetApplicationBar(System.Windows.Window,Elysium.Controls.ApplicationBar)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.Window.ApplicationBar"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Панель управления приложением.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Controls.Window.IsApplicationBarHost">
+      <summary>
+        Возвращает или задаёт значение, указывающее, является ли указанный элемент управления объектом, на котором будет размещаться панель управления приложением.
+      </summary>
+      <value>Указывает, является ли указанный элемент управления объектом, на котором будет размещаться панель управления приложением. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.Window.IsApplicationBarHostProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Decorator();
+          var currentValue = Window.GetIsApplicationBarHost(control);
+          Window.SetIsApplicationBarHost(control, true);
+        </code>
+        <code lang="XAML">
+          &lt;Decorator metro:Window.IsApplicationBarHost="True"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Controls.Window.IsApplicationBarHostProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.Window.IsApplicationBarHost"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.Window.IsApplicationBarHost"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.Window.GetIsApplicationBarHost(System.Windows.Controls.Decorator)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsApplicationBarHost"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Указывает, является ли указанный элемент управления объектом, на котором будет размещаться панель управления приложением.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.Window.SetIsApplicationBarHost(System.Windows.Controls.Decorator,System.Boolean)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Controls.Window.IsApplicationBarHost"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Указывает, является ли указанный элемент управления объектом, на котором будет размещаться панель управления приложением.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Controls.Window.OnApplyTemplate">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

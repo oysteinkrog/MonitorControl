@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.CommandButtonAutomationPeer">
+      <summary>
+        Является провайдером типа <see cref="T:Elysium.Controls.CommandButton"/> для технологии UI Automation.
+      </summary>
+    </type>
+    <method name="M:Elysium.Controls.Automation.CommandButtonAutomationPeer.#ctor(Elysium.Controls.CommandButton)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.CommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр класса <see cref="T:Elysium.Controls.CommandButton"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.Automation.CommandButtonAutomationPeer.GetClassNameCore">
+      <summary>
+        Возвращает имя класса <see cref="T:Elysium.Controls.CommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ApplicationBarAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+      </summary>
+      <returns>
+        Строка со значением "CommandButton".
+      </returns>
+      <ensures>Возвращаемая строка всегда имеет значение "CommandButton"</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.CommandButtonAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+      <summary>
+        Возвращает шаблон элемента управления для экземпляра элемента управления <see cref="T:Elysium.Controls.CommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.CommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="patternInterface">
+        Одно из значений перечисления <see cref="T:System.Windows.Automation.Peers.PatternInterface"/>.
+      </param>
+      <returns>
+        Если параметр <paramref name="patternInterface"/> имеет значение <see cref="F:System.Windows.Automation.Peers.PatternInterface.Invoke"/>,
+        то данный метод возвращает указатель this; в противном случае данный метод возвращает значение null.
+      </returns>
+    </method>
+    <method name="M:Elysium.Controls.Automation.CommandButtonAutomationPeer.Invoke">
+      <summary>
+        Направляет запрос на активацию элемента управления и инициирует его единственное, однозначное действие.
+      </summary>
+      <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Элемент управления отключен.</exception>
+    </method>
+  </members>
+</doc>

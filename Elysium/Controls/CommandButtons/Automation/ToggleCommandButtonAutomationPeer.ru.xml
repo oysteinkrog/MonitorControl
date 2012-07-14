@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer">
+      <summary>
+        Является провайдером типа <see cref="T:Elysium.Controls.ToggleCommandButton"/> для технологии UI Automation.
+      </summary>
+    </type>
+    <method name="M:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer.#ctor(Elysium.Controls.ToggleCommandButton)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр класса <see cref="T:Elysium.Controls.ToggleCommandButton"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer.GetClassNameCore">
+      <summary>
+        Возвращает имя класса <see cref="T:Elysium.Controls.ToggleCommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ApplicationBarAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+      </summary>
+      <returns>
+        Строка со значением "ToggleCommandButton".
+      </returns>
+      <ensures>Возвращаемая строка всегда имеет значение "ToggleCommandButton"</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+      <summary>
+        Возвращает шаблон элемента управления для экземпляра элемента управления <see cref="T:Elysium.Controls.ToggleCommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="patternInterface">
+        Одно из значений перечисления <see cref="T:System.Windows.Automation.Peers.PatternInterface"/>.
+      </param>
+      <returns>
+        Если параметр <paramref name="patternInterface"/> имеет значение <see cref="F:System.Windows.Automation.Peers.PatternInterface.Toggle"/>,
+        то данный метод возвращает указатель this; в противном случае данный метод возвращает значение null.
+      </returns>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer.Toggle">
+      <summary>
+        Выполняет переключение состояния элемента управления.
+      </summary>
+      <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Элемент управления отключен.</exception>
+    </method>
+    <property name="P:Elysium.Controls.Automation.ToggleCommandButtonAutomationPeer.ToggleState">
+      <summary>Возвращает состояние элемента управления (из числа тех, в которые он может переключаться).</summary>
+      <value>Одно из значений перечисления <see cref="T:System.Windows.Automation.ToggleState"/>.</value>
+    </property>
+  </members>
+</doc>

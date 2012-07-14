@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ToggleSwitch">
+      <summary>
+        Переключатель (toggle switch).
+      </summary>
+    </type>
+    <property name="P:Elysium.Controls.ToggleSwitch.IsChecked">
+      <summary>
+        Возвращает или задаёт значение, указывающее, находится ли переключатель во включенном состоянии.
+      </summary>
+      <value>True, если переключатель находится во включенном состоянии; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.IsCheckedProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.IsCheckedProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsChecked"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsChecked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnIsCheckedChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsChecked"/>.
+      </summary>
+      <param name="oldIsChecked">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsChecked"/>.
+      </param>
+      <param name="newIsChecked">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsChecked"/>.
+      </param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleSwitch.Checked">
+      <summary>
+        Событие генерируется при переходе в состояние "включено".
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.CheckedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleSwitch.OnChecked(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleSwitch.CheckedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleSwitch.Checked"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.Checked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnChecked(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.Checked"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleSwitch.Unchecked">
+      <summary>
+        Событие генерируется при переходе в состояние "выключено".
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.UncheckedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleSwitch.OnUnchecked(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleSwitch.UncheckedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleSwitch.Unchecked"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.Unchecked"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnUnchecked(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.Unchecked"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.IsSwitching">
+      <summary>
+        Возвращает значение, указывающее, производится ли в данный момент смена состояний переключателя.
+      </summary>
+      <value>True, если в данный момент смена состояний переключателя производится; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.IsSwitchingProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.IsSwitchingProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsSwitching"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsSwitching"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnIsSwitchingChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsSwitching"/>.
+      </summary>
+      <param name="oldIsSwitching">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsSwitching"/>.
+      </param>
+      <param name="newIsSwitching">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.IsSwitching"/>.
+      </param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleSwitch.SwitchStarted">
+      <summary>
+        Событие генерируется перед началом изменения состояния переключателя.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.SwitchStartedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleSwitch.OnSwitchStarted(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleSwitch.SwitchStartedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleSwitch.SwitchStarted"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.SwitchStarted"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnSwitchStarted(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.SwitchStarted"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <event name="E:Elysium.Controls.ToggleSwitch.SwitchCompleted">
+      <summary>
+        Событие генерируется после завершения изменения состояния переключателя.
+      </summary>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.SwitchCompletedEvent"/>
+            </description>
+          </item>
+          <item>
+            <term>Ассоциированный метод</term>
+            <description>
+              <see cref="M:Elysium.Controls.ToggleSwitch.OnSwitchCompleted(System.Windows.RoutedEventArgs)"/>
+            </description>
+          </item>
+          <item>
+            <term>Стратегия маршрутизации</term>
+            <description>Восходящая маршрутизация событий</description>
+          </item>
+        </list>
+      </remarks>
+    </event>
+    <field name="F:Elysium.Controls.ToggleSwitch.SwitchCompletedEvent">
+      <summary>
+        Идентифицирует маршрутизируемое событие <see cref="E:Elysium.Controls.ToggleSwitch.SwitchCompleted"/>.
+      </summary>
+      <value>
+        Идентификатор маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.SwitchCompleted"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnSwitchCompleted(System.Windows.RoutedEventArgs)">
+      <summary>
+        Вызывается при генерации маршрутизируемого события <see cref="E:Elysium.Controls.ToggleSwitch.SwitchCompleted"/>.
+      </summary>
+      <param name="e">Маршрутизируемое событие.</param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OnHeader">
+      <summary>
+        Возвращает или задаёт данные, используемые для заголовка переключателя во включенном состоянии.
+      </summary>
+      <value>Объект заголовка переключателя во включенном состоянии. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OnHeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.Header"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OnHeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOnHeaderChanged(System.Object,System.Object)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/>.
+      </summary>
+      <param name="oldOnHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/>.
+      </param>
+      <param name="newOnHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.HasOnHeader">
+      <summary>
+        Возвращает значение, указывающее имеет ли заголовок переключателя во включенном состоянии значение null в данный момент.
+      </summary>
+      <value>
+        True, если значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeader"/> не равно null, в противном случае False. Значение по умолчанию — False.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.HasOnHeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HasHeader"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.HasOnHeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOnHeader"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOnHeader"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnHasOnHeaderChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOnHeader"/>.
+      </summary>
+      <param name="oldHasOnHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOnHeader"/>.
+      </param>
+      <param name="newHasOnHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOnHeader"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat">
+      <summary>
+        Возвращает или задаёт составную строку, которая определяет форматирование заголовка переключателя во включенном состоянии, если он отображается как строка.
+      </summary>
+      <value>Составная строка, которая определяет форматирование заголовка переключателя во включенном состоянии, если он отображается как строка. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OnHeaderStringFormatProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OnHeaderStringFormatProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOnHeaderStringFormatChanged(System.String,System.String)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat"/>.
+      </summary>
+      <param name="oldOnHeaderStringFormat">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat"/>.
+      </param>
+      <param name="newOnHeaderStringFormat">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderStringFormat"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate">
+      <summary>
+        Возвращает или задаёт шаблон, используемый для отображения содержимого заголовка переключателя во включенном состоянии.
+      </summary>
+      <value>Шаблон, используемый для отображения содержимого заголовка переключателя во включенном состоянии. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OnHeaderTemplateProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OnHeaderTemplateProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOnHeaderTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate"/>.
+      </summary>
+      <param name="oldOnHeaderTemplate">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate"/>.
+      </param>
+      <param name="newOnHeaderTemplate">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplate"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector">
+      <summary>
+        Возвращает или задаёт селектор шаблона данных, предоставляющий пользовательскую логику для выбора шаблона отображения содержимого заголовка переключателя во включенном состоянии.
+      </summary>
+      <value>Экземпляр селектора шаблона данных. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelectorProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelectorProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOnHeaderTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector"/>.
+      </summary>
+      <param name="oldOnHeaderTemplateSelector">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector"/>.
+      </param>
+      <param name="newOnHeaderTemplateSelector">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OnHeaderTemplateSelector"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OffHeader">
+      <summary>
+        Возвращает или задаёт данные, используемые для заголовка переключателя в выключенном состоянии.
+      </summary>
+      <value>Объект заголовка переключателя в выключенном состоянии. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OffHeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.Header"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OffHeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOffHeaderChanged(System.Object,System.Object)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/>.
+      </summary>
+      <param name="oldOffHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/>.
+      </param>
+      <param name="newOffHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.HasOffHeader">
+      <summary>
+        Возвращает значение, указывающее имеет ли заголовок переключателя в выключенном состоянии значение null в данный момент.
+      </summary>
+      <value>
+        True, если значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeader"/> не равно null, в противном случае False. Значение по умолчанию — False.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.HasOffHeaderProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HasHeader"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.HasOffHeaderProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOffHeader"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOffHeader"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnHasOffHeaderChanged(System.Boolean,System.Boolean)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOffHeader"/>.
+      </summary>
+      <param name="oldHasOffHeader">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOffHeader"/>.
+      </param>
+      <param name="newHasOffHeader">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.HasOffHeader"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat">
+      <summary>
+        Возвращает или задаёт составную строку, которая определяет форматирование заголовка переключателя в выключенном состоянии, если он отображается как строка.
+      </summary>
+      <value>Составная строка, которая определяет форматирование заголовка переключателя в выключенном состоянии, если он отображается как строка. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OffHeaderStringFormatProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OffHeaderStringFormatProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOffHeaderStringFormatChanged(System.String,System.String)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat"/>.
+      </summary>
+      <param name="oldOffHeaderStringFormat">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat"/>.
+      </param>
+      <param name="newOffHeaderStringFormat">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderStringFormat"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate">
+      <summary>
+        Возвращает или задаёт шаблон, используемый для отображения содержимого заголовка переключателя в выключенном состоянии.
+      </summary>
+      <value>Шаблон, используемый для отображения содержимого заголовка переключателя в выключенном состоянии. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OffHeaderTemplateProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OffHeaderTemplateProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOffHeaderTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate"/>.
+      </summary>
+      <param name="oldOffHeaderTemplate">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate"/>.
+      </param>
+      <param name="newOffHeaderTemplate">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplate"/>.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector">
+      <summary>
+        Возвращает или задаёт селектор шаблона данных, предоставляющий пользовательскую логику для выбора шаблона отображения содержимого заголовка переключателя в выключенном состоянии.
+      </summary>
+      <value>Экземпляр селектора шаблона данных. Значение по умолчанию — null.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelectorProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <seealso cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector"/>
+    </property>
+    <field name="F:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelectorProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnOffHeaderTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+      <summary>
+        Вызывается при изменении свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector"/>.
+      </summary>
+      <param name="oldOffHeaderTemplateSelector">
+        Старое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector"/>.
+      </param>
+      <param name="newOffHeaderTemplateSelector">
+        Новое значение свойства зависимостей <see cref="P:Elysium.Controls.ToggleSwitch.OffHeaderTemplateSelector"/>.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnCreateAutomationPeer">
+      <inheritdoc/>
+    </method>
+    <method name="M:Elysium.Controls.ToggleSwitch.OnApplyTemplate">
+      <inheritdoc/>
+    </method>
+  </members>
+</doc>

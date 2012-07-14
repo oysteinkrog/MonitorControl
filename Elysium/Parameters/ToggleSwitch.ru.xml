@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.ToggleSwitch">
+      <summary>
+        Представляет класс, управляющий настройками стиля элемента управления <see cref="T:Elysium.Controls.ToggleSwitch"/>.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.ToggleSwitch.TrackSize">
+      <summary>
+        Возвращает или задаёт ширину переключателя в элементе управления <see cref="T:Elysium.Controls.ToggleSwitch"/>.
+      </summary>
+      <value>Ширина переключателя. Значение по умолчанию — 48px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ToggleSwitch.TrackSizeProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ToggleSwitch();
+          var currentValue = Parameters.ToggleSwitch.GetTrackSize(control);
+          Parameters.ToggleSwitch.SetTrackSize(control, 48d);
+        </code>
+        <code lang="XAML">
+          &lt;ToggleSwitch params:ToggleSwitch.TrackSize="48px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ToggleSwitch.TrackSizeProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.TrackSize"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.TrackSize"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ToggleSwitch.GetTrackSize(Elysium.Controls.ToggleSwitch)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.TrackSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Ширина переключателя.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ToggleSwitch.SetTrackSize(Elysium.Controls.ToggleSwitch,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.TrackSize"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Ширина переключателя.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.ToggleSwitch.ThumbThickness">
+      <summary>
+        Возвращает или задаёт толщину переключателя в элементе управления <see cref="T:Elysium.Controls.ToggleSwitch"/>.
+      </summary>
+      <value>Толщина переключателя. Значение по умолчанию — 10px.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.ToggleSwitch.ThumbThicknessProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new ToggleSwitch();
+          var currentValue = Parameters.ToggleSwitch.GetThumbThickness(control);
+          Parameters.ToggleSwitch.SetThumbThickness(control, 10d);
+        </code>
+        <code lang="XAML">
+          &lt;ToggleSwitch params:ToggleSwitch.ThumbThickness="10px"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.ToggleSwitch.ThumbThicknessProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.ThumbThickness"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.ThumbThickness"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.ToggleSwitch.GetThumbThickness(Elysium.Controls.ToggleSwitch)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.ThumbThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Толщина переключателя.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение является положительным числом.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.ToggleSwitch.SetThumbThickness(Elysium.Controls.ToggleSwitch,System.Double)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.ToggleSwitch.ThumbThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Толщина переключателя.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

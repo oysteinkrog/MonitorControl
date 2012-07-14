@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer">
+      <summary>
+        Является провайдером типа <see cref="T:Elysium.Controls.DropDownCommandButton"/> для технологии UI Automation.
+      </summary>
+    </type>
+    <method name="M:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.#ctor(Elysium.Controls.DropDownCommandButton)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр класса <see cref="T:Elysium.Controls.DropDownCommandButton"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <method name="M:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.GetClassNameCore">
+      <summary>
+        Возвращает имя класса <see cref="T:Elysium.Controls.DropDownCommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ApplicationBarAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+      </summary>
+      <returns>
+        Строка со значением "DropDownCommandButton".
+      </returns>
+      <ensures>Возвращаемая строка всегда имеет значение "DropDownCommandButton"</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+      <summary>
+        Возвращает шаблон элемента управления для экземпляра элемента управления <see cref="T:Elysium.Controls.DropDownCommandButton"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer"/>.
+      </summary>
+      <param name="patternInterface">
+        Одно из значений перечисления <see cref="T:System.Windows.Automation.Peers.PatternInterface"/>.
+      </param>
+      <returns>
+        Если параметр <paramref name="patternInterface"/> имеет значение <see cref="F:System.Windows.Automation.Peers.PatternInterface.ExpandCollapse"/>,
+        то данный метод возвращает указатель this; в противном случае данный метод возвращает значение null.
+      </returns>
+    </method>
+    <method name="M:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.Expand">
+      <summary>
+        Отображает всплывающее меню.
+      </summary>
+      <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Элемент управления отключен.</exception>
+      <exception cref="T:System.InvalidOperationException">Всплывающее меню не задано для этого экземпляра.</exception>
+    </method>
+    <method name="M:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.Collapse">
+      <summary>
+        Скрывает всплывающее меню.
+      </summary>
+      <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Элемент управления отключен.</exception>
+      <exception cref="T:System.InvalidOperationException">Всплывающее меню не задано для этого экземпляра.</exception>
+    </method>
+    <property name="P:Elysium.Controls.Automation.DropDownCommandButtonAutomationPeer.ExpandCollapseState">
+      <summary>Возвращает состояние элемента управления — развернут или свернут.</summary>
+      <value>Cостояние элемента управления — развернут или свернут.</value>
+    </property>
+  </members>
+</doc>

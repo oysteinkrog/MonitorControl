@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.ToggleSwitchAutomationPeer">
+      <summary>
+        Является провайдером типа <see cref="T:Elysium.Controls.ToggleSwitch"/> для технологии UI Automation.
+      </summary>
+      <invariant>Свойство Owner никогда не равно null.</invariant>
+    </type>
+    <method name="M:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.#ctor(Elysium.Controls.ToggleSwitch)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.ToggleSwitchAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр класса <see cref="T:Elysium.Controls.ToggleSwitch"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.Owner">
+      <summary>
+        Экземпляр элемента управления <see cref="T:Elysium.Controls.ToggleSwitch"/>, для которого используется провайдер.
+      </summary>
+      <getter>
+        <ensures>Значение не может равняться null.</ensures>
+      </getter>
+      <value>
+        Экземпляр элемента управления <see cref="T:Elysium.Controls.ToggleSwitch"/>, для которого используется провайдер.
+      </value>
+    </property>
+    <method name="M:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.GetClassNameCore">
+      <summary>
+        Возвращает имя класса <see cref="T:Elysium.Controls.ToggleSwitch"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ApplicationBarAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+      </summary>
+      <returns>
+        Строка со значением "ToggleSwitch".
+      </returns>
+      <ensures>Возвращаемая строка всегда имеет значение "ToggleSwitch"</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.GetAutomationControlTypeCore">
+      <summary>
+        Возвращает тип элемента управления для элемента управления <see cref="T:Elysium.Controls.ToggleSwitch"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.CommandButtonBaseAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType"/>.
+      </summary>
+      <returns>
+        Значение <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Slider">AutomationControlType.Slider</see>.
+      </returns>
+      <ensures>Возвращаемое значение всегда является значением AutomationControlType.Slider.</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+      <summary>
+        Возвращает шаблон элемента управления для экземпляра элемента управления <see cref="T:Elysium.Controls.ToggleSwitch"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ToggleSwitchAutomationPeer"/>.
+      </summary>
+      <param name="patternInterface">
+        Одно из значений перечисления <see cref="T:System.Windows.Automation.Peers.PatternInterface"/>.
+      </param>
+      <returns>
+        Если параметр <paramref name="patternInterface"/> имеет значение <see cref="F:System.Windows.Automation.Peers.PatternInterface.Toggle"/>,
+        то данный метод возвращает указатель this; в противном случае данный метод возвращает значение null.
+      </returns>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.Toggle">
+      <summary>
+        Выполняет переключение состояния элемента управления.
+      </summary>
+      <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Элемент управления отключен.</exception>
+    </method>
+    <property name="P:Elysium.Controls.Automation.ToggleSwitchAutomationPeer.ToggleState">
+      <summary>Возвращает состояние элемента управления (из числа тех, в которые он может переключаться).</summary>
+      <value>Одно из значений перечисления <see cref="T:System.Windows.Automation.ToggleState"/>.</value>
+    </property>
+  </members>
+</doc>

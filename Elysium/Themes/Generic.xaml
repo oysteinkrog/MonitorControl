@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/SharedResources.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Icons.xaml"/>
+
+        <ResourceDictionary Source="/Elysium;component/Themes/Windows/Window.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/ApplicationBar/ApplicationBar.xaml"/>
+
+        <ResourceDictionary Source="/Elysium;component/Themes/Menus/Menu.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Menus/ContextMenu.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Menus/Submenu.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Menus/MenuItem.xaml"/>
+
+        <ResourceDictionary Source="/Elysium;component/Themes/Tabs/TabControl.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Tabs/TabItem.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/Button.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/RepeatButton.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/ToggleButton.xaml"/>
+
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/CommandButton.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/ToggleCommandButton.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/DropDownCommandButton.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/CheckBox.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Buttons/RadioButton.xaml"/>
+
+        <ResourceDictionary Source="/Elysium;component/Themes/TextBoxes/TextBox.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/TextBoxes/PasswordBox.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/TextBoxes/RichTextBox.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Selectors/ListBox.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Selectors/ListBoxItem.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Selectors/ComboBox.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Selectors/ComboBoxItem.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Ranges/ToggleSwitch.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Ranges/Slider.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Ranges/ProgressBar.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Ranges/ProgressRing.xaml"/>
+        
+        <ResourceDictionary Source="/Elysium;component/Themes/Scrolls/ScrollBar.xaml"/>
+        <ResourceDictionary Source="/Elysium;component/Themes/Scrolls/ScrollViewer.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

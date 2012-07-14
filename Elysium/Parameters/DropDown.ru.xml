@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.DropDown">
+      <summary>
+        Представляет класс, управляющий настройками стиля выпадающего списка (в т.ч. выпадающего субменю).
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.DropDown.IsOpen">
+      <summary>
+        Возвращает или задаёт значение, указывающее открыт ли в данный момент выпадающий список.
+      </summary>
+      <value>True, если выпадающий список открыт; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.DropDown.IsOpenProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Popup();
+          var currentValue = Parameters.DropDown.GetIsOpen(control);
+          Parameters.DropDown.SetIsOpen(control, true);
+        </code>
+        <code lang="XAML">
+          &lt;Trigger Property="IsSubmenuOpen" Value="True"&gt;
+            &lt;Setter TargetName="PART_Popup" Property="params:DropDown.IsOpen" Value="True"/&gt;
+          &lt;Trigger/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.DropDown.IsOpenProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.DropDown.IsOpen"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsOpen"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.DropDown.GetIsOpen(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsOpen"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Значение, указывающее открыт ли в данный момент выпадающий список.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <method name="M:Elysium.Parameters.DropDown.SetIsOpen(System.Windows.UIElement,System.Boolean)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsOpen"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Значение, указывающее открыт ли в данный момент выпадающий список.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.DropDown.IsDefaultHorizontalPosition">
+      <summary>
+        Возвращает значение, указывающее сопадает ли текущее горизонтальное положение выпадающего списка и соответствующее значение по-умолчнию.
+      </summary>
+      <value>True, если значения сопадают; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.DropDown.IsDefaultHorizontalPositionProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Popup();
+          var currentValue = Parameters.DropDown.GetIsDefaultHorizontalPosition(control);
+        </code>
+        <code lang="XAML">
+          &lt;Trigger SourceName="PART_Popup" Property="params:DropDown.IsDefaultHorizontalPosition" Value="True"&gt;
+            ...
+          &lt;Trigger/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.DropDown.IsDefaultHorizontalPositionProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultHorizontalPosition"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultHorizontalPosition"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.DropDown.GetIsDefaultHorizontalPosition(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultHorizontalPosition"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Значение, указывающее сопадает ли текущее горизонтальное положение выпадающего списка и соответствующее значение по-умолчнию.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <property name="P:Elysium.Parameters.DropDown.IsDefaultVerticalPosition">
+      <summary>
+        Возвращает значение, указывающее сопадает ли текущее вертикальное положение выпадающего списка и соответствующее значение по-умолчнию.
+      </summary>
+      <value>True, если значения сопадают; иначе False. Значение по умолчанию — False.</value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.DropDown.IsDefaultVerticalPositionProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.None"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Popup();
+          var currentValue = Parameters.DropDown.GetIsDefaultVerticalPosition(control);
+        </code>
+        <code lang="XAML">
+          &lt;Trigger SourceName="PART_Popup" Property="params:DropDown.IsDefaultVerticalPosition" Value="True"&gt;
+            ...
+          &lt;Trigger/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.DropDown.IsDefaultVerticalPositionProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultVerticalPosition"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultVerticalPosition"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.DropDown.GetIsDefaultVerticalPosition(System.Windows.UIElement)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.DropDown.IsDefaultVerticalPosition"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Значение, указывающее сопадает ли текущее вертикальное положение выпадающего списка и соответствующее значение по-умолчнию.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+    <field name="F:Elysium.Parameters.DropDown.PopupPlacementCallback">
+      <summary>
+        Возвращает делегат, используемый для вычисления положения выпадающего списка.
+      </summary>
+      <value>Делегат, используемый для вычисления положения выпадающего списка.</value>
+      <seealso cref="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback"/>
+    </field>
+  </members>
+</doc>

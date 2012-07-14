@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.ApplicationBarTransitionMode">
+      <summary>
+        Определяет анимацию появления и исчезания элемента управления <see cref="T:Elysium.Controls.ApplicationBar"/>.
+      </summary>
+    </type>
+    <field name="F:Elysium.Controls.ApplicationBarTransitionMode.None">
+      <summary>
+        Анимация отсутствует.
+      </summary>
+    </field>
+    <field name="F:Elysium.Controls.ApplicationBarTransitionMode.Fade">
+      <summary>
+        Элемент управления <see cref="T:Elysium.Controls.ApplicationBar"/> меняет свою прозрачность с 0% до 100%.
+      </summary>
+    </field>
+    <field name="F:Elysium.Controls.ApplicationBarTransitionMode.Slide">
+      <summary>
+        Элемент управления <see cref="T:Elysium.Controls.ApplicationBar"/> постепенно "выезжает" из-за нижнего края окна.
+      </summary>
+    </field>
+  </members>
+</doc>

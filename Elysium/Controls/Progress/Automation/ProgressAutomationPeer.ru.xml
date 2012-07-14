@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Controls.Automation.ProgressAutomationPeer">
+      <summary>
+        Является провайдером для наследников класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/> для технологии UI Automation.
+      </summary>
+      <invariant>Свойство Owner никогда не равно null.</invariant>
+    </type>
+    <method name="M:Elysium.Controls.Automation.ProgressAutomationPeer.#ctor(Elysium.Controls.Primitives.ProgressBase)">
+      <summary>
+        Создаёт новый экземпляр класса <see cref="T:Elysium.Controls.Automation.ProgressAutomationPeer"/>.
+      </summary>
+      <param name="owner">
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, для которого будет использоваться провайдер.
+      </param>
+    </method>
+    <property name="P:Elysium.Controls.Automation.ProgressAutomationPeer.Owner">
+      <summary>
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, для которого используется провайдер.
+      </summary>
+      <getter>
+        <ensures>Значение не может равняться null.</ensures>
+      </getter>
+      <value>
+        Экземпляр наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, для которого используется провайдер.
+      </value>
+    </property>
+    <method name="M:Elysium.Controls.Automation.ProgressAutomationPeer.GetClassNameCore">
+      <summary>
+        Возвращает имя класса для наследника <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ProgressAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+      </summary>
+      <returns>
+        Строка со значением "ProgressBar".
+      </returns>
+      <ensures>Возвращаемая строка всегда имеет значение "ProgressBar"</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ProgressAutomationPeer.GetAutomationControlTypeCore">
+      <summary>
+        Возвращает тип элемента управления для объекта-наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ProgressAutomationPeer"/>. Данный метод вызывается методом <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType"/>.
+      </summary>
+      <returns>
+        Значение <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ProgressBar">AutomationControlType.ProgressBar</see>.
+      </returns>
+      <ensures>Возвращаемое значение всегда является значением AutomationControlType.ProgressBar.</ensures>
+    </method>
+    <method name="M:Elysium.Controls.Automation.ProgressAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+      <summary>
+        Возвращает шаблон элемента управления для объекта-наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/>, который связан с данным объектом <see cref="T:Elysium.Controls.Automation.ProgressAutomationPeer"/>.
+      </summary>
+      <param name="patternInterface">
+        Одно из значений перечисления <see cref="T:System.Windows.Automation.Peers.PatternInterface"/>.
+      </param>
+      <returns>Если параметр <paramref name="patternInterface"/> имеет значение <see cref="F:System.Windows.Automation.Peers.PatternInterface.RangeValue"/>,      
+      а состояние объекта-наследника класса <see cref="T:Elysium.Controls.Primitives.ProgressBase"/> не равно <see cref="F:Elysium.Controls.ProgressState.Indeterminate"/> или <see cref="F:Elysium.Controls.ProgressState.Busy"/>,
+      то данный метод возвращает указатель this; в противном случае данный метод возвращает значение null.</returns>
+    </method>
+    <property name="P:Elysium.Controls.Automation.ProgressAutomationPeer.IsReadOnly">
+      <summary>Возвращает значение, указывающее, является ли значение элемента управления доступным только для чтения.</summary>
+      <getter>
+        <ensures>Возвращаемое значение всегда равно True.</ensures>
+      </getter>
+      <value>
+        True, если значение доступно только для чтения; False, если его можно изменять.
+        Всегда возвращается значение True, т.е. элемента управления является доступным только для чтения.
+      </value>
+    </property>
+    <property name="P:Elysium.Controls.Automation.ProgressAutomationPeer.LargeChange">
+      <summary>Возвращает значение, добавляемое к значению свойства <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value"/> или вычитаемое из него при внесении большого изменения, например, при нажатии кнопки PAGE DOWN.</summary>
+      <getter>
+        <ensures>Возвращаемое значение всегда равно Double.NaN.</ensures>
+      </getter>
+      <value>
+        Поддерживаемое элементом управления значение большого изменения или <see cref="F:System.Double.NaN">Double.NaN</see>, если элемент управления не поддерживает это свойство.
+        Всегда возвращается значение <see cref="F:System.Double.NaN">Double.NaN</see>, поскольку элемент управления не поддерживает это свойство.
+      </value>
+    </property>
+    <property name="P:Elysium.Controls.Automation.ProgressAutomationPeer.SmallChange">
+      <summary>Возвращает значение, добавляемое к значению свойства <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value"/> или вычитаемое из него при внесении малого изменения, например, при нажатии кнопки СТРЕЛКА ВНИЗ.</summary>
+      <getter>
+        <ensures>Возвращаемое значение всегда равно Double.NaN.</ensures>
+      </getter>
+      <value>
+        Поддерживаемое элементом управления значение малого изменения или <see cref="F:System.Double.NaN">Double.NaN</see>, если элемент управления не поддерживает это свойство.
+        Всегда возвращается значение <see cref="F:System.Double.NaN">Double.NaN</see>, поскольку элемент управления не поддерживает это свойство.
+      </value>
+    </property>
+  </members>
+</doc>

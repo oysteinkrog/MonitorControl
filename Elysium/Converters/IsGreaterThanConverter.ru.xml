@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Converters.IsGreaterThanConverter">
+      <summary>
+        Определяет, больше одно число другого или нет.
+      </summary>
+    </type>
+    <method name="M:Elysium.Converters.IsGreaterThanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Определяет, больше одно число другого или нет, с двойной точностью.
+      </summary>
+      <param name="value">
+        Число, принадлежащее к одному из следующих типов: <see cref="T:System.Byte"/>, <see cref="T:System.Int16"/>, <see cref="T:System.Int32"/>, <see cref="T:System.Int64"/>, <see cref="T:System.Single"/>, <see cref="T:System.Double"/>, <see cref="T:System.Decimal"/>."</param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">
+        Параметр конвертера. Второе сравниваемое значение. Должен быть строкой, и выражать число, которое может быть приведено к типу <see cref="T:System.Double"/>
+      </param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        True, если <paramref name="value"/> больше, чем <paramref name="parameter"/>, иначе — False.
+        В случае неудачного выполнения метода возвращается значение <see cref="F:System.Windows.DependencyProperty.UnsetValue">DependencyProperty.UnsetValue</see>.
+      </returns>
+    </method>
+  </members>
+</doc>

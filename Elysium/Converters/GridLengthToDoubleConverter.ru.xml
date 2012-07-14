@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Converters.GridLengthToDoubleConverter">
+      <summary>
+        Конвертирует значение типа <see cref="T:System.Windows.GridLength"/> в значение типа <see cref="T:System.Double"/>.
+      </summary>
+    </type>
+    <method name="M:Elysium.Converters.GridLengthToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Конвертирует значение типа <see cref="T:System.Windows.GridLength"/> в значение типа <see cref="T:System.Double"/>.
+      </summary>
+      <param name="value">
+        Исходное значение типа <see cref="T:System.Windows.GridLength"/>.
+      </param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">Параметр конвертера. Должен быть строкой и принимать одно из следующих значений: "Auto", "*" или null.</param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        Значение типа <see cref="T:System.Double"/>. Результатом является значение <see cref="P:System.Windows.GridLength.Value"/> или
+        <see cref="F:System.Windows.DependencyProperty.UnsetValue">DependencyProperty.UnsetValue</see>, в случае несовпадения типов ("Auto", "*" или количество пикселей) <paramref name="value"/> и <paramref name="parameter"/> или неудачного выполнения метода.
+      </returns>
+    </method>
+    <method name="M:Elysium.Converters.GridLengthToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        Конвертирует значение типа <see cref="T:System.Double"/> в значение типа <see cref="T:System.Windows.GridLength"/>.
+      </summary>
+      <param name="value">
+        Исходное значение типа <see cref="T:System.Double"/>.
+      </param>
+      <param name="targetType">Целевой тип. Значение игнорируется.</param>
+      <param name="parameter">Параметр конвертера. Должен быть строкой и принимать одно из следующих значений: "Auto", "*" или null.</param>
+      <param name="culture">Язык и региональные параметры, используемые в конвертере. Значение игнорируется.</param>
+      <returns>
+        Значение типа <see cref="T:System.Windows.GridLength"/>.
+        Результат зависит от значения параметра <paramref name="parameter"/>:
+        <list type="bullet">
+          <item>
+            <description>
+              "Auto": <see cref="P:System.Windows.GridLength.Auto">GridLength.Auto</see>. Значение параметра <paramref name="value"/> игнорируется.
+            </description>
+          </item>
+          <item>
+            <description>
+              "*": Значение выражается как взвешенная пропорция доступного пространства. Значение доли должно быть указано в параметре <paramref name="value"/>.
+            </description>
+          </item>
+          <item>
+            <description>
+              null: Возвращается значение в пикселях. Количество пикселей должно быть указано в параметре <paramref name="value"/>.
+            </description>
+          </item>
+        </list>
+      </returns>
+    </method>
+  </members>
+</doc>

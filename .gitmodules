@@ -1,0 +1,3 @@
+[submodule "WPF Shell Integration Library"]
+	path = WPF Shell Integration Library
+	url = git@github.com:oysteinkrog/WPF-Shell-Integration-Library.git

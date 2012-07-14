@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.Parameters.Window">
+      <summary>
+        Представляет класс, управляющий основными настройками стилей элементов управления.
+      </summary>
+    </type>
+    <property name="P:Elysium.Parameters.Window.ResizeBorderThickness">
+      <summary>
+        Возвращает или задаёт толщину рамки изменения размера элемента управления <see cref="T:Elysium.Controls.Window"/>.
+      </summary>
+      <value>
+        Толщина рамки изменения размера окна. Значение по умолчанию — 3px.
+      </value>
+      <remarks>
+        <list type="table">
+          <item>
+            <term>Идентификатор</term>
+            <description>
+              <see cref="F:Elysium.Parameters.Window.ResizeBorderThicknessProperty"/>
+            </description>
+          </item>
+          <item>
+            <term>Метаданные</term>
+            <description>
+              <see cref="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange"/>
+            </description>
+          </item>
+        </list>
+      </remarks>
+      <example>
+        <code lang="C#">
+          var control = new Elysium.Controls.Window();
+          var currentValue = Parameters.Window.GetResizeBorderThickness(control);
+          Parameters.Window.SetResizeBorderThickness(control, new Thickness(3d));
+        </code>
+        <code lang="XAML">
+          &lt;metro:Window params:Window.ResizeBorderThickness="3"/&gt;
+        </code>
+      </example>
+    </property>
+    <field name="F:Elysium.Parameters.Window.ResizeBorderThicknessProperty">
+      <summary>
+        Идентифицирует свойство зависимостей <see cref="P:Elysium.Parameters.Window.ResizeBorderThickness"/>.
+      </summary>
+      <value>
+        Идентификатор для свойства зависимостей <see cref="P:Elysium.Parameters.Window.ResizeBorderThickness"/>.
+      </value>
+    </field>
+    <method name="M:Elysium.Parameters.Window.GetResizeBorderThickness(Elysium.Controls.Window)">
+      <summary>
+        Возвращает значение свойства зависимостей <see cref="P:Elysium.Parameters.Window.ResizeBorderThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого считывается значение свойства.</param>
+      <returns>Толщина рамки изменения размера окна.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+      <ensures>Возвращаемое значение всегда является положительным.</ensures>
+    </method>
+    <method name="M:Elysium.Parameters.Window.SetResizeBorderThickness(Elysium.Controls.Window,System.Windows.Thickness)">
+      <summary>
+        Задаёт значение свойства зависимостей <see cref="P:Elysium.Parameters.Window.ResizeBorderThickness"/> для указанного элемента управления.
+      </summary>
+      <param name="obj">Элемент управления, для которого устанавливается значение свойства.</param>
+      <param name="value">Толщина рамки изменения размера окна.</param>
+      <exception cref="T:System.ArgumentNullException">
+        Параметер <paramref name="obj"/> имеет значение null.
+      </exception>
+      <requires exception="T:System.ArgumentNullException">obj != null</requires>
+    </method>
+  </members>
+</doc>

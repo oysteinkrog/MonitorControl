@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Documentation\Documentation.xsd">
+  <assembly>
+    <name>Elysium</name>
+  </assembly>
+  <members>
+    <type name="T:Elysium.AccentBrushes">
+      <summary>
+        Предоставляет набор кистей со сплошной заливкой на основе одного из акцентирующих цветов.
+      </summary>
+    </type>
+    <property name="P:Elysium.AccentBrushes.Blue">
+      <summary>
+        Возвращает кисть сплошной заливки синего цвета (#FF017BCD).
+      </summary>
+      <value>Кисть со сплошной заливкой синего цвета (#FF017BCD).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Brown">
+      <summary>
+        Возвращает кисть сплошной заливки коричневого цвета (#FFA05000).
+      </summary>
+      <value>Кисть со сплошной заливкой коричневого цвета (#FFA05000).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Green">
+      <summary>
+        Возвращает кисть сплошной заливки зелёного цвета (#FF339933).
+      </summary>
+      <value>Кисть со сплошной заливкой зелёного цвета (#FF339933).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Lime">
+      <summary>
+        Возвращает кисть сплошной заливки лаймового цвета (#FF8CBF26).
+      </summary>
+      <value>Кисть со сплошной заливкой лаймового цвета (#FF8CBF26).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Magenta">
+      <summary>
+        Возвращает кисть сплошной заливки цвета маджента (#FFFF0097).
+      </summary>
+      <value>Кисть со сплошной заливкой цвета маджента (#FFFF0097).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Mango">
+      <summary>
+        Возвращает кисть сплошной заливки цвета манго (#FFF09609).
+      </summary>
+      <value>Кисть со сплошной заливкой цвета манго (#FFF09609).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Orange">
+      <summary>
+        Возвращает кисть сплошной заливки оранжевого цвета (#FFCB5201).
+      </summary>
+      <value>Кисть со сплошной заливкой оранжевого цвета (#FFCB5201).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Pink">
+      <summary>
+        Возвращает кисть сплошной заливки светло-розового цвета (#FFE671B8).
+      </summary>
+      <value>Кисть со сплошной заливкой светло-розового цвета (#FFE671B8).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Purple">
+      <summary>
+        Возвращает кисть сплошной заливки пурпурного цвета (#FF69227B).
+      </summary>
+      <value>Кисть со сплошной заливкой пурпурного цвета (#FFA69227B).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Red">
+      <summary>
+        Возвращает кисть сплошной заливки красного цвета (#FFE51400).
+      </summary>
+      <value>Кисть со сплошной заливкой красного цвета (#FFE51400).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Rose">
+      <summary>
+        Возвращает кисть сплошной заливки розового цвета (#FFD80073).
+      </summary>
+      <value>Кисть со сплошной заливкой розового цвета (#FFD80073).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Sky">
+      <summary>
+        Возвращает кисть сплошной заливки голубого цвета (#FF1BA1E2).
+      </summary>
+      <value>Кисть со сплошной заливкой голубого цвета (#FF1BA1E2).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Viridian">
+      <summary>
+        Возвращает кисть сплошной заливки морского цвета (#FF00ABA9).
+      </summary>
+      <value>Кисть со сплошной заливкой морского цвета (#FF00ABA9).</value>
+    </property>
+    <property name="P:Elysium.AccentBrushes.Violet">
+      <summary>
+        Возвращает кисть сплошной заливки фиолетового цвета (#FF00ABA9).
+      </summary>
+      <value>Кисть со сплошной заливкой фиолетового цвета (#FFA200FF).</value>
+    </property>
+  </members>
+</doc>
